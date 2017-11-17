@@ -1,0 +1,13 @@
+prefix=/home/mcc/directFB
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+moduledir=${exec_prefix}/lib/directfb-1.7-0
+moduledirname=directfb-1.7-0
+includedir=${prefix}/include
+
+Name: Direct
+Description: DirectFB base development library
+Version: 1.7.0
+Libs: -L${libdir} -ldirect -lpthread
+Libs.private: -L${libdir} 
+Cflags: -D_REENTRANT -I${prefix}/include/directfb

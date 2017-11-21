@@ -9,5 +9,5 @@ Name: Direct
 Description: DirectFB base development library
 Version: 1.7.0
 Libs: -L${libdir} -ldirect -lpthread
-Libs.private: -L${libdir} 
+Libs.private: -L${libdir} -ldl
 Cflags: -D_REENTRANT -I${prefix}/include/directfb

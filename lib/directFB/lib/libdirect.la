@@ -5,19 +5,19 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname=''
+dlname='libdirect-1.7.so.0'
 
 # Names of this library.
-library_names=''
+library_names='libdirect-1.7.so.0.0.0 libdirect-1.7.so.0 libdirect.so'
 
 # The name of the static archive.
-old_library='libdirect.a'
+old_library=''
 
 # Linker flags that can not go in dependency_libs.
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -lrt -lpthread /home/sying/wucaiyuan_toolchain/v400/glibc_gcc4.8_linaro_toolchain/install/arm-hisiv400-linux/arm-hisiv400-linux-gnueabi/lib/libstdc++.la'
+dependency_libs=' -L/opt/hisi-linux/x86-arm/arm-hisiv400-linux/target/lib -lrt -lpthread -ldl /home/sying/wucaiyuan_toolchain/v400/glibc_gcc4.8_linaro_toolchain/install/arm-hisiv400-linux/arm-hisiv400-linux-gnueabi/lib/libstdc++.la'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

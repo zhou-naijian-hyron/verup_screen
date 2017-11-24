@@ -1,0 +1,65 @@
+SYSFILE	= Makefile
+
+##
+## Path Define
+##
+RELEASE_PATH = $(TOPDIR)/release
+VERUP_PATH = $(TOPDIR)/verup
+CHECKSTACK = $(TOPDIR)/bin/CheckStack.pl
+
+#################
+## Cross Define
+CROSS        = arm-hisiv400-linux-
+
+# 最適化
+OPTIMIZE = -O2
+# バックトレース取得用
+#OPTIMIZE += -rdynamic  -mapcs-frame
+# デバッグ出力レベル
+DEBUG_LEVEL  = -DZ_DBG_LEVEL=2
+
+CFLAGS_MUST = -march=armv7-a -mfloat-abi=softfp -mfpu=neon-vfpv4 -mno-unaligned-access -fno-aggressive-loop-optimizations
+CXXFLAGS_MUST = -march=armv7-a -mfloat-abi=softfp -mfpu=neon-vfpv4 -mno-unaligned-access -fno-aggressive-loop-optimizations
+
+# -fno-strict-aliasing -ffast-math  を削除した
+CFLAGS_DEF     = $(CFLAGS_MUST) -fsigned-char $(OPTIMIZE) -Wall $(TARGET_BOARD) $(DEBUG_LEVEL)
+CPPFLAGS_DEF   = $(CXXFLAGS_MUST) -fsigned-char $(OPTIMIZE) -Wall $(TARGET_BOARD) $(DEBUG_LEVEL)
+CFLAGS_LIB     = $(CFLAGS_MUST) -fsigned-char $(OPTIMIZE) -Wall $(TARGET_BOARD) $(DEBUG_LEVEL) -fPIC
+CPPFLAGS_LIB   = $(CXXFLAGS_MUST) -fsigned-char $(OPTIMIZE) -Wall $(TARGET_BOARD) $(DEBUG_LEVEL) -fPIC
+GENLIB         = -lpthread
+GENLIB_AR      = $(GENLIB)
+
+# NET設定IPアドレス無効化対応（★NFSでデバッグするときのみ無効にする、リリース時には必ず有効に！）
+CFLAGS_DEF  += -DD_NET_SET_SETTING_IP_ADDRESS
+
+# 異常系画面確認用FW作成時のオプション
+#CFLAGS_DEF  += -DD_ERRMENU
+
+## Command Define
+AS		= $(CROSS)as
+LD		= $(CROSS)ld
+CC		= $(CROSS)gcc
+CXX		= $(CROSS)g++
+AR		= $(CROSS)ar
+NM		= $(CROSS)nm
+OBJCOPY	= $(CROSS)objcopy
+OBJDUMP	= $(CROSS)objdump
+RANLIB	= $(CROSS)ranlib
+CP		= cp -f
+MV		= mv -f
+CAT		= cat
+GREP	= grep
+AWK		= awk
+SED		= sed
+ECHO	= echo
+RM		= rm -f
+SYMCNV	= gsymcnv
+MULTI	= multi
+DIFF	= diff
+LN		= ln -s
+PERL	= perl
+
+#set euc path
+DEST_DIR=$(subst G3NVR_APL,G3NVR_APL_EUC,$(shell pwd))
+EUC_TOP_DIR=$(subst G3NVR_APL,G3NVR_APL_EUC,$(TOPDIR))
+

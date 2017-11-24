@@ -17,7 +17,7 @@ old_library=''
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/opt/hisi-linux/x86-arm/arm-hisiv400-linux/target/lib /home/mcc/directFB/lib/libdirectfb.la /home/mcc/directFB/lib/libfusion.la /home/mcc/directFB/lib/libdirect.la /home/sying/wucaiyuan_toolchain/v400/glibc_gcc4.8_linaro_toolchain/install/arm-hisiv400-linux/arm-hisiv400-linux-gnueabi/lib/libstdc++.la -lm -lrt -lpthread -ldl'
+dependency_libs=' /home/mcc/directFB/lib/libdirectfb.la /home/mcc/directFB/lib/libfusion.la /home/mcc/directFB/lib/libdirect.la /home/sying/wucaiyuan_toolchain/v400/glibc_gcc4.8_linaro_toolchain/install/arm-hisiv400-linux/arm-hisiv400-linux-gnueabi/lib/libstdc++.la -lm -ldl -lrt -lpthread'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

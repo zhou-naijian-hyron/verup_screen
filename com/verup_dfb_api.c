@@ -19,14 +19,6 @@
 
 #include "verup_dfb_api.h"
 
-/** DirectFBにて、文字フォントのテーブル */
-static char myFonts[1][48] = {
-		"/usr/mcc/lib/fonts/Tf1hrgw4.ttf",
-		};
-
-/** DirectFBにて、文字フォントのインデックス */
-static int myFontIndex = 0;
-
 /** DirectFBにて、対象色のARGB8888の値 */
 static DFBColor myColors_3[] = {
 		/* A    R     G     B */
@@ -80,6 +72,9 @@ typedef enum {
 		CLEAR,
 } ColorSelection;
 
+/** DirectFBにて、文字フォント */
+#define D_DEFAULT_FONT					"/usr/mcc/lib/fonts/Tf1hrgw4.ttf"
+
 /** DirectFBにて、画面の起点 */
 #define D_DIRECT_FB_X_POS				(0)
 #define D_DIRECT_FB_Y_POS				(0)
@@ -94,10 +89,10 @@ typedef enum {
 
 
 static IDirectFB				*dfb			= NULL;		/** DirectFBリソース */
-static IDirectFBSurface 		*surfaceOfMain	 = NULL;	/** DirectFBのsurface */
-static IDirectFBPalette			*paletteOfMain	 = NULL;	/** DirectFBの調色板 */
+static IDirectFBSurface 		*surfaceOfMain	= NULL;		/** DirectFBのsurface */
+static IDirectFBPalette			*paletteOfMain	= NULL;		/** DirectFBの調色板 */
 static IDirectFBDisplayLayer	*layer			= NULL;		/** DirectFBの表示レイヤ */
-static IDirectFBWindow			*winMain		 = NULL;	/** DirectFBのウィンドウ */
+static IDirectFBWindow			*winMain		= NULL;		/** DirectFBのウィンドウ */
 static IDirectFBFont			*font			= NULL;		/** DirectFBのフォント */
 static DFBDisplayLayerConfig	config;						/** DirectFBの表示レイヤの配置 */
 
@@ -136,7 +131,8 @@ static IDirectFBWindow * createWindow(int x, int y, int width ,int height)
 	// 表示レイヤ と ウィンドウをcreateする
 	if( 0 != (result = layer->CreateWindow(layer, &wdesc, &win)) )
 	{
-		return 0;
+		DirectFBError("createWindow() failed", result);
+		return NULL;
 	}
 
 	return win;
@@ -277,14 +273,14 @@ static int init_dfb(void)
 	if (0 != (result = DirectFBInit(NULL, NULL)))
 	{
 		DirectFBError( "DirectFBInit() failed", result );
-		return -1;
+		goto ERROR;
 	}
 
 	/** 2．DirectFBのCreate */
 	if (0 != (result = DirectFBCreate(&dfb))) 
 	{
 		DirectFBError( "DirectFBCreate() failed", result );
-		return -1;
+		goto ERROR;
 	}
 
 	/** 3．DirectFBの表示レイヤのCreate */
@@ -298,38 +294,31 @@ static int init_dfb(void)
 		{
 			DirectFBError( "IDirectFB::GetDisplayLayer() failed", result );
 		}
-		dfb->Release( dfb );
-		return -1;
+		goto ERROR_DFB;
 	}
 
 	/** 4．DirectFBの表示レイヤの協同組合レベルを設定する */
 	if (0 != (result = layer->SetCooperativeLevel(layer, DLSCL_EXCLUSIVE))) 
 	{
 		DirectFBError("IDirectFBDisplayLayer::SetCooperativeLevel() failed", result);
-		layer->Release(layer);
-		dfb->Release(dfb);
-		return -1;
+		goto ERROR_LAYER;
 	}
 
 	/** 5．DirectFBの表示レイヤの属性をgetする */
 	if (0 != (result = layer->GetConfiguration(layer, &config)))
 	{
 		DirectFBError( "IDirectFBDisplayLayer::GetConfiguration() failed", result );
-		layer->Release( layer );
-		dfb->Release( dfb );
-		return -1;
+		goto ERROR_LAYER;
 	}
 
 	/** 6．DirectFBの表示レイヤの属性をsetする */
 	config.flags = DLCONF_BUFFERMODE | DLCONF_PIXELFORMAT;
-	config.buffermode = DLBM_BACKSYSTEM;
+	config.buffermode = DLBM_FRONTONLY;
 	config.pixelformat = DSPF_ARGB;
 	if (0 != (result = layer->SetConfiguration(layer, &config))) 
 	{
 		DirectFBError( "IDirectFBDisplayLayer::SetConfiguration() failed", result );
-		layer->Release( layer );
-		dfb->Release( dfb );
-		return -1;
+		goto ERROR_LAYER;
 	}
 
 	/** 7．DirectFBのスクリーンの属性をgetする */
@@ -337,11 +326,13 @@ static int init_dfb(void)
 	if (0 != (result = dfb->GetScreen(dfb, 0, &iDirectFBScreen)))
 	{
 		DirectFBError("Couldn't get screen data .. \n", result);
+		goto ERROR_LAYER;
 	}
 	else
 	{
 		iDirectFBScreen->GetSize(iDirectFBScreen, &screenWidth, &screenHeight);
 		iDirectFBScreen->Release(iDirectFBScreen);
+		printf( "GetScreen with ( width=%d, height=%d )\n", screenWidth, screenHeight);
 	}
 
 	/** 8．DirectFBの文字フォントを設定する */
@@ -357,18 +348,23 @@ static int init_dfb(void)
 	}
 	fdesc.flags |= DFDESC_ATTRIBUTES;
 	fdesc.attributes = DFFA_NONE;
-	if (0 != (result = dfb->CreateFont(dfb, myFonts[myFontIndex], &fdesc, &font)))
+	result = dfb->CreateFont(dfb, D_DEFAULT_FONT, &fdesc, &font);
+	if (0 != result)
 	{
-		DirectFBError("Couldn't create font ...: ", result);
-		layer->Release(layer);
-		dfb->Release(dfb);
-		return -1;
+		DirectFBError("Couldn't create font", result);
+		goto ERROR_LAYER;
 	}
 
 	/** 9．DirectFBのマウスカーソルが無効に設定する */
 	layer->EnableCursor(layer, 0);
-
 	return 0;
+
+ERROR_LAYER:
+	layer->Release(layer);
+ERROR_DFB:
+	dfb->Release(dfb);
+ERROR:
+	return -1;
 }
 
 /******************************************************************************/
@@ -453,8 +449,6 @@ void hub_verup_output_screen(void)
  ******************************************************************************/
 int hub_verup_init_screen(void)
 {
-	myFontIndex = 0;
-
 	/** Ctrl+Cを無効にする */
 	signal( SIGINT, SIG_IGN );
 

@@ -90,67 +90,12 @@ typedef enum {
 
 static IDirectFB				*dfb			= NULL;		/** DirectFBリソース */
 static IDirectFBSurface 		*surfaceOfMain	= NULL;		/** DirectFBのsurface */
-static IDirectFBPalette			*paletteOfMain	= NULL;		/** DirectFBの調色板 */
-static IDirectFBDisplayLayer	*layer			= NULL;		/** DirectFBの表示レイヤ */
-static IDirectFBWindow			*winMain		= NULL;		/** DirectFBのウィンドウ */
 static IDirectFBFont			*font			= NULL;		/** DirectFBのフォント */
-static DFBDisplayLayerConfig	config;						/** DirectFBの表示レイヤの配置 */
 
-#define MODNAME	 "[DFB Using window]\t"
+#define MODNAME	 "[DFB_API]\t"
 
 static int screenWidth;
 static int screenHeight;
-
-/******************************************************************************/
-/*! @brief ウィンドウをcreateする
-
- @param[in]		x		ウィンドウのxpos
- @param[in]		y		ウィンドウのypos
- @param[in]		width	ウィンドウの広さ
- @param[in]		height	ウィンドウの高さ
- @return		成功 ウィンドウのポインター, 失敗 0
- ******************************************************************************/
-static IDirectFBWindow * createWindow(int x, int y, int width ,int height)
-{
-	int result;
-	IDirectFBWindow *win;
-	DFBWindowDescription wdesc;
-
-	wdesc.flags 		= ( DWDESC_CAPS | 
-							DWDESC_POSX | 
-							DWDESC_POSY | 
-							DWDESC_WIDTH | 
-							DWDESC_HEIGHT );
-	wdesc.caps 			= DWCAPS_ALPHACHANNEL;
-	wdesc.posx 			= x;
-	wdesc.posy 			= y;
-	wdesc.width 		= width;
-	wdesc.height 		= height;
-	wdesc.pixelformat 	= DSPF_ARGB;
-
-	// 表示レイヤ と ウィンドウをcreateする
-	if( 0 != (result = layer->CreateWindow(layer, &wdesc, &win)) )
-	{
-		DirectFBError("createWindow() failed", result);
-		return NULL;
-	}
-
-	return win;
-}
-
-/******************************************************************************/
-/*! @brief surfaceをクリアする
-
- @param[in]		srf		surfaceのポインター
- @return		無
- ******************************************************************************/
-static void clear_surface(IDirectFBSurface *srf)
-{
-	if( srf != 0 )
-	{
-		srf->Clear(srf, 0, 0, 0, 0);
-	}
-}
 
 /******************************************************************************/
 /*! @brief ウィンドウを初期化する
@@ -158,50 +103,31 @@ static void clear_surface(IDirectFBSurface *srf)
  @param			無
  @return		成功 0, 失敗 -1
  ******************************************************************************/
-static int initWindow()
+static int initSurface()
 {
 	int result;
 
-	/** 1．ウィンドウをcreateする */
-	printf("screenWidth:%d     screenHeight:%d\n", screenWidth, screenHeight);
-	winMain = createWindow( 0, 0, screenWidth, screenHeight);
-	if( winMain == NULL )
-	{
-		fprintf(stderr, MODNAME "createWindow failed\n");
-		return -1;
-	}
-
-	/** 2．surfaceを取得する */
-	winMain->GetSurface(winMain, &surfaceOfMain);
+	/** 1．surfaceをcreateする */
+	DFBSurfaceDescription  sdsc;
+	sdsc.flags = DSDESC_CAPS;
+	sdsc.caps  = DSCAPS_PRIMARY | DSCAPS_DOUBLE;
+	result = dfb->CreateSurface( dfb, &sdsc, &surfaceOfMain );
 	if( surfaceOfMain == NULL )
 	{
-		fprintf(stderr, MODNAME "GetSurface failed\n");
+		DirectFBError("CreateSurface() failed\n", result);
 		return -1;
 	}
 
-	/** 3．調色板を取得する */
-	surfaceOfMain->GetPalette(surfaceOfMain, &paletteOfMain);
-	if( paletteOfMain == NULL )
+	/** 2．文字フォントを設定する */
+	if(0 != (result = surfaceOfMain->SetFont(surfaceOfMain, font)))
 	{
-		fprintf(stderr, MODNAME "GetPalette failed\n");
+		DirectFBError("SetFont() failed\n", result);
 		return -1;
 	}
 
-	/** 4．調色板のリストを設定する */
-	if( 0 != (result = paletteOfMain->SetEntries(paletteOfMain, myColors_3, sizeof(myColors_3)/sizeof(myColors_3[0]), 0)) )
-	{
-		fprintf(stderr, MODNAME "SetEntries failed\n");
-		return -1;
-	}
+	/** 3．surfaceをクリアする */
+	surfaceOfMain->Clear(surfaceOfMain, 0, 0, 0, 0);
 
-	/** 5．文字フォントを設定する */
-	surfaceOfMain->SetFont(surfaceOfMain, font);
-
-	/** 6．surfaceをクリアする */
-	clear_surface(surfaceOfMain);
-
-	/** 7．ウィンドウ初期表示時、全透明で非表示する */
-	winMain->SetOpacity(winMain, 0x00);
 	return 0;
 }
 
@@ -211,27 +137,13 @@ static int initWindow()
  @param			無
  @return		無
  ******************************************************************************/
-static void releaseWindow()
+static void releaseSurface()
 {
-	// 調色板を解放する
-	if( paletteOfMain != NULL )
-	{
-		paletteOfMain->Release(paletteOfMain);
-		paletteOfMain = NULL;
-	}
-
 	// surfaceを解放する
 	if( surfaceOfMain != NULL )
 	{
 		surfaceOfMain->Release(surfaceOfMain);
 		surfaceOfMain = NULL;
-	}
-
-	// 画面を開放する
-	if( winMain != NULL )
-	{
-		winMain->Release(winMain);
-		winMain = NULL;
 	}
 }
 
@@ -250,43 +162,12 @@ static void releaseResource()
 		font = NULL;
 	}
 
-	// Layerリソースの解放
-	if( layer != NULL )
-	{
-		layer->Release(layer);
-		layer = NULL;
-	}
-
 	// DirectFbリソースの解放
 	if( dfb != NULL )
 	{
 		dfb->Release(dfb);
 		dfb = NULL;
 	}
-}
-
-/******************************************************************************/
-/*! @brief surfaceの色を設定する
-
- @param[in]		srf		surfaceのポインター
- @param[in]		color	色
- @return		無
- ******************************************************************************/
-static void SetColor(IDirectFBSurface* srf, ColorSelection color)
-{
-	if( !srf )
-	{
-		fprintf(stderr, "[%s] No surface!!!\n", __FUNCTION__);
-		return;
-	}
-
-	if( (color < BLACK) || (color > CLEAR) )
-	{
-		fprintf(stderr, "[%s] Bad Color Index %d!!!\n", __FUNCTION__, color);
-		return;
-	}
-
-	srf->SetColorIndex(srf, color);
 }
 
 /******************************************************************************/
@@ -313,59 +194,27 @@ static int init_dfb(void)
 		return -1;
 	}
 
-	/** 3．DirectFBの表示レイヤのCreate */
-	if (0 != (result = dfb->GetDisplayLayer(dfb, DLID_PRIMARY, &layer)))
+	/** 3．DirectFBの属性をsetする */
+	if (0 != (result = dfb->SetCooperativeLevel( dfb, DFSCL_FULLSCREEN )))
 	{
-		if (result == DFB_IDNOTFOUND)
-		{
-			fprintf(stderr, MODNAME "Unknown layer id, check 'dfbinfo' for valid values.\n");
-		}
-		else
-		{
-			DirectFBError( "IDirectFB::GetDisplayLayer() failed", result );
-		}
+		DirectFBError( "SetCooperativeLevel() failed", result );
 		return -1;
 	}
 
-	/** 4．DirectFBの表示レイヤの協同組合レベルを設定する */
-	if (0 != (result = layer->SetCooperativeLevel(layer, DLSCL_EXCLUSIVE))) 
-	{
-		DirectFBError("IDirectFBDisplayLayer::SetCooperativeLevel() failed", result);
-		return -1;
-	}
-
-	/** 5．DirectFBの表示レイヤの属性をgetする */
-	if (0 != (result = layer->GetConfiguration(layer, &config)))
-	{
-		DirectFBError( "IDirectFBDisplayLayer::GetConfiguration() failed", result );
-		return -1;
-	}
-
-	/** 6．DirectFBの表示レイヤの属性をsetする */
-	config.flags = DLCONF_BUFFERMODE | DLCONF_PIXELFORMAT;
-	config.buffermode = DLBM_BACKSYSTEM;
-	config.pixelformat = DSPF_ARGB;
-	if (0 != (result = layer->SetConfiguration(layer, &config))) 
-	{
-		DirectFBError( "IDirectFBDisplayLayer::SetConfiguration() failed", result );
-		return -1;
-	}
-
-	/** 7．DirectFBのスクリーンの属性をgetする */
+	/** 4．DirectFBのスクリーンのwidth,heightをgetする */
 	IDirectFBScreen* iDirectFBScreen;
 	if (0 != (result = dfb->GetScreen(dfb, 0, &iDirectFBScreen)))
 	{
-		DirectFBError("Couldn't get screen data .. \n", result);
+		DirectFBError("GetScreen() failed", result);
 		return -1;
 	}
 	else
 	{
 		iDirectFBScreen->GetSize(iDirectFBScreen, &screenWidth, &screenHeight);
 		iDirectFBScreen->Release(iDirectFBScreen);
-		printf( "GetScreen with ( width=%d, height=%d )\n", screenWidth, screenHeight);
 	}
 
-	/** 8．DirectFBの文字フォントを設定する */
+	/** 5．DirectFBの文字フォントを設定する */
 	DFBFontDescription fdesc;
 	fdesc.flags = DFDESC_HEIGHT;
 	if (screenWidth == 1920)
@@ -378,15 +227,11 @@ static int init_dfb(void)
 	}
 	fdesc.flags |= DFDESC_ATTRIBUTES;
 	fdesc.attributes = DFFA_NONE;
-	result = dfb->CreateFont(dfb, D_DEFAULT_FONT, &fdesc, &font);
-	if (0 != result)
+	if (0 != (result = dfb->CreateFont(dfb, D_DEFAULT_FONT, &fdesc, &font)))
 	{
-		DirectFBError("Couldn't create font", result);
+		DirectFBError("CreateFont() failed", result);
 		return -1;
 	}
-
-	/** 9．DirectFBのマウスカーソルが無効に設定する */
-	layer->EnableCursor(layer, 0);
 
 	return 0;
 }
@@ -399,9 +244,9 @@ static int init_dfb(void)
  @param[in]		y		文字列起点のypos
  @return		無
  ******************************************************************************/
-void hub_verup_draw_string(	const char *s, int x, int y) 
+void hifb_dfb_draw_string(	const char *s, int x, int y)
 {
-	SetColor(surfaceOfMain, D_DIRECT_FB_FONT_COLOR);
+	surfaceOfMain->SetColor(surfaceOfMain, myColors_3[D_DIRECT_FB_FONT_COLOR].r, myColors_3[D_DIRECT_FB_FONT_COLOR].g, myColors_3[D_DIRECT_FB_FONT_COLOR].b, myColors_3[D_DIRECT_FB_FONT_COLOR].a);
 	surfaceOfMain->DrawString(surfaceOfMain, s, -1, x, y, DSTF_TOPLEFT);
 	return;
 }
@@ -415,9 +260,9 @@ void hub_verup_draw_string(	const char *s, int x, int y)
  @param[in]		y		選択肢の長さ
  @return		無
  ******************************************************************************/
-void hub_verup_draw_select_string(const char *s, int x, int y, int len) 
+void hifb_dfb_draw_select_string(const char *s, int x, int y, int len)
 {
-	surfaceOfMain->SetColorIndex(surfaceOfMain, D_DIRECT_FB_BACK_COLOR);
+	surfaceOfMain->SetColor(surfaceOfMain, myColors_3[D_DIRECT_FB_BACK_COLOR].r, myColors_3[D_DIRECT_FB_BACK_COLOR].g, myColors_3[D_DIRECT_FB_BACK_COLOR].b, myColors_3[D_DIRECT_FB_BACK_COLOR].a);
 	if(screenWidth == 1920)
 	{
 		// 矩形塗り潰し表示
@@ -428,27 +273,22 @@ void hub_verup_draw_select_string(const char *s, int x, int y, int len)
 		// 矩形塗り潰し表示
 		surfaceOfMain->FillRectangle(surfaceOfMain, x, y, D_DIRECT_FB_FONTSIZE_XGA*len, D_DIRECT_FB_FONTSIZE_XGA);
 	}
-	surfaceOfMain->SetColorIndex(surfaceOfMain, D_DIRECT_FB_FONT_COLOR);
+	surfaceOfMain->SetColor(surfaceOfMain, myColors_3[D_DIRECT_FB_FONT_COLOR].r, myColors_3[D_DIRECT_FB_FONT_COLOR].g, myColors_3[D_DIRECT_FB_FONT_COLOR].b, myColors_3[D_DIRECT_FB_FONT_COLOR].a);
 	surfaceOfMain->DrawString(surfaceOfMain, s, -1, x, y, DSTF_TOPLEFT);
 
 	return;
 }
 
 /******************************************************************************/
-/*! @brief 画面スクリーンのクリア
+/*! @brief 背景画面
 
  @param			無
  @return		無
  ******************************************************************************/
-void hub_verup_clear_screen(void)
+void hifb_dfb_background(void)
 {
-	surfaceOfMain->SetColorIndex( surfaceOfMain, D_DIRECT_FB_BACK_COLOR );
+	surfaceOfMain->SetColor(surfaceOfMain, myColors_3[D_DIRECT_FB_BACK_COLOR].r, myColors_3[D_DIRECT_FB_BACK_COLOR].g, myColors_3[D_DIRECT_FB_BACK_COLOR].b, myColors_3[D_DIRECT_FB_BACK_COLOR].a);
 	surfaceOfMain->FillRectangle( surfaceOfMain, D_DIRECT_FB_X_POS, D_DIRECT_FB_Y_POS, screenWidth, screenHeight );
-
-	// 非透明設定で非表示⇒表示
-	winMain->SetOpacity(winMain, 0xFF);
-	surfaceOfMain->Flip(surfaceOfMain, NULL, DSFLIP_BLIT);
-
 	return;
 }
 
@@ -458,10 +298,22 @@ void hub_verup_clear_screen(void)
  @param			無
  @return		無
  ******************************************************************************/
-void hub_verup_output_screen(void)
+void hifb_dfb_output(void)
 {
-	surfaceOfMain->Flip(surfaceOfMain, NULL, DSFLIP_BLIT);
+	surfaceOfMain->Flip(surfaceOfMain, NULL, DSFLIP_NONE);
+	return;
+}
 
+/******************************************************************************/
+/*! @brief 画面スクリーンのクリア
+
+ @param			無
+ @return		無
+ ******************************************************************************/
+void hifb_dfb_clear_screen(void)
+{
+	hifb_dfb_background();
+	hifb_dfb_output();
 	return;
 }
 
@@ -471,7 +323,7 @@ void hub_verup_output_screen(void)
  @param			無
  @return		無
  ******************************************************************************/
-int hub_verup_init_screen(void)
+int hifb_dfb_init_screen(void)
 {
 	/** Ctrl+Cを無効にする */
 	signal( SIGINT, SIG_IGN );
@@ -479,26 +331,25 @@ int hub_verup_init_screen(void)
 	/** DirectFBを初期化する */
 	if (0 != init_dfb())
 	{
-		fprintf(stderr, MODNAME "failed to build DirectFB\n");
+		fprintf(stderr, MODNAME "failed to init_dfb\n");
 		goto ERROR;
 	}
 
 	/** ウィンドウを初期化する */
-	if (0 != initWindow())
+	if (0 != initSurface())
 	{
-		fprintf(stderr, MODNAME "failed to initWindow\n");
+		fprintf(stderr, MODNAME "failed to initSurface\n");
 		goto ERROR;
 	}
 
 	/** 画面のクリア */
-	hub_verup_clear_screen();
+	hifb_dfb_clear_screen();
 
 	return 0;
 
 ERROR:
-	/** ウィンドウの解放 */
-	releaseWindow();
-	/** リソースの解放 */
+	/** 解放 */
+	releaseSurface();
 	releaseResource();
 	return -1;
 }
@@ -509,16 +360,14 @@ ERROR:
  @param			無
  @return		無
  ******************************************************************************/
-int hub_verup_exit_screen(void)
+int hifb_dfb_exit_screen(void)
 {
 	/** 画面のクリア */
-	hub_verup_clear_screen();
-	clear_surface(surfaceOfMain);
+	hifb_dfb_clear_screen();
 
-	/** ウィンドウの解放 */
-	releaseWindow();
-
-	/** リソースの解放 */
+	/** 終了処理 */
+	surfaceOfMain->Clear(surfaceOfMain, 0, 0, 0, 0);
+	releaseSurface();
 	releaseResource();
 
 	return 0;

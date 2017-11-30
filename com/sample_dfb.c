@@ -36,33 +36,30 @@ int main(int argc, char* argv[])
 	int xpos;
 
 	// 1. 画面初期化
-	printf("[VerUp Mode Debug] init screen start.\n");
-	ret = hub_verup_init_screen();
+	ret = hifb_dfb_init_screen();
 	if( ret != 0 )
 	{
-		printf("[VerUp Mode Debug] init screen err.\n");
+		fprintf(stderr, "[VerUpProgress] hifb_dfb_init_screen() failed.\n");
 		return -1;
 	}
+	printf("[VerUpProgress] initialization complete.wait 10s.\n");
+	sleep(10);
 
+	// 2. 文字表示
+	// 背景色
+	hifb_dfb_background();
 	// 画面サイズと書き込み文字数より描画中央位置の算出
 	snprintf(title,sizeof(title),"ファームウェア更新 (1/1)");
 	xpos = ((g_LayoutPix[ layoutPatton ].Width / g_LayoutPix[ layoutPatton ].FontSize) - (strlen(title) / 2)) / 2;
+	hifb_dfb_draw_string(title, (int)(xpos * g_LayoutPix[ layoutPatton ].FontSize), (int)(1 * g_LayoutPix[ layoutPatton ].FontSize));
+	// 出力
+	hifb_dfb_output();
+	printf("[VerUpProgress] string display. wait 20s.\n");
+	sleep(20);
 
-	// タイトル行の設定
-	hub_verup_draw_string(title, (int)(xpos * g_LayoutPix[ layoutPatton ].FontSize), (int)(1 * g_LayoutPix[ layoutPatton ].FontSize));
-	hub_verup_output_screen();
-	printf("[VerUp Mode Debug] screen display.\n");
-
-	printf("[VerUp Mode Debug] wait 100s...\n");
-	sleep(100);
-
-	ret = hub_verup_exit_screen();
-	printf("[VerUp Mode Debug] exit screen.\n");
-	if( ret != 0 )
-	{
-		printf("[VerUp Mode Debug] exit screen err.\n");
-		return -1;
-	}
+	// 3. 画面クローズ
+	hifb_dfb_exit_screen();
+	printf("[VerUpProgress] exit screen.\n");
 
 	return 0;
 }

@@ -1,0 +1,1967 @@
+         U DirectFBCreate
+         U DirectFBErrorString
+         U DirectFBInit
+         w _ITM_deregisterTMCloneTable
+         w _ITM_registerTMCloneTable
+         w _Jv_RegisterClasses
+         U std::ostream::operator<<(std::ostream& (*)(std::ostream&))@@GLIBCXX_3.4
+         U std::ios_base::Init::Init()@@GLIBCXX_3.4
+         U std::ios_base::Init::~Init()@@GLIBCXX_3.4
+         U std::cerr@@GLIBCXX_3.4
+         U std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)@@GLIBCXX_3.4
+         U std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)@@GLIBCXX_3.4
+         U vtable for __cxxabiv1::__class_type_info@@CXXABI_1.3
+         U vtable for __cxxabiv1::__pointer_type_info@@CXXABI_1.3
+         U vtable for __cxxabiv1::__si_class_type_info@@CXXABI_1.3
+         U operator delete(void*)@@GLIBCXX_3.4
+         U operator new(unsigned int)@@GLIBCXX_3.4
+         U __aeabi_atexit@@CXXABI_ARM_1.3.3
+         U __aeabi_unwind_cpp_pr1@@GCC_3.5
+         U __cxa_allocate_exception@@CXXABI_1.3
+         U __cxa_end_cleanup@@CXXABI_1.3
+         w __cxa_finalize@@GLIBC_2.4
+         U __cxa_free_exception@@CXXABI_1.3
+         U __cxa_throw@@CXXABI_1.3
+         U __cyg_profile_func_enter
+         U __cyg_profile_func_exit
+         w __gmon_start__
+         U __gxx_personality_v0@@CXXABI_1.3
+         U strncmp@@GLIBC_2.4
+00000010 N $d
+0000026c N $d
+00001058 N $d
+00001494 N $d
+00001d80 N $d
+00001f8c N $d
+000021c0 N $d
+000022dc N $d
+00002650 N $d
+00002884 N $d
+00002ba8 N $d
+00003aac N $d
+00003dd0 N $d
+0000a740 t $a
+0000a740 T _init
+0000a748 t $a
+0000a74c t $a
+0000a75c t $d
+0000a760 t $a
+0000abbc t $a
+0000abbc t call_weak_fn
+0000abd8 t $d
+0000abe0 t $a
+0000abe0 t deregister_tm_clones
+0000ac1c t $d
+0000ac2c t $a
+0000ac2c t register_tm_clones
+0000ac70 t $d
+0000ac80 t $a
+0000ac80 t __do_global_dtors_aux
+0000acd4 t $d
+0000ace8 t $a
+0000ace8 t frame_dummy
+0000ad24 t $d
+0000ad30 t $a
+0000ad30 T DFBException::DFBException(char const*, DFBResult)
+0000ad30 T DFBException::DFBException(char const*, DFBResult)
+0000ae58 t $d
+0000ae6c t $a
+0000ae6c T DFBException::GetAction() const
+0000aed0 t $d
+0000aed8 t $a
+0000aed8 T DFBException::GetResult() const
+0000af68 t $d
+0000af70 t $a
+0000af70 T DFBException::GetResultCode() const
+0000afd4 t $d
+0000afdc t $a
+0000afdc T operator<<(std::ostream&, DFBException*)
+0000b0ac t $d
+0000b0b8 t $a
+0000b0b8 T DirectFB::Init(int*, char***)
+0000b1b4 t $d
+0000b1c4 t $a
+0000b1c4 T DirectFB::Create()
+0000b2d4 t $d
+0000b2e4 t $a
+0000b2e4 t __static_initialization_and_destruction_0(int, int)
+0000b3b0 t $d
+0000b3d0 t $a
+0000b3d0 t _GLOBAL__sub_I_ppdfb.cpp
+0000b41c t $d
+0000b424 t $a
+0000b424 W IDirectFB::IDirectFB(_IDirectFB*)
+0000b424 W IDirectFB::IDirectFB(_IDirectFB*)
+0000b4cc t $d
+0000b4d8 t $a
+0000b4d8 W IDirectFB::~IDirectFB()
+0000b4d8 W IDirectFB::~IDirectFB()
+0000b58c t $d
+0000b598 t $a
+0000b598 W IDirectFB::~IDirectFB()
+0000b628 t $d
+0000b630 t $a
+0000b630 W IPPAny<IDirectFB, _IDirectFB>::IPPAny(_IDirectFB*)
+0000b630 W IPPAny<IDirectFB, _IDirectFB>::IPPAny(_IDirectFB*)
+0000b6b4 t $d
+0000b6c0 t $a
+0000b6c0 W IPPAny<IDirectFB, _IDirectFB>::~IPPAny()
+0000b6c0 W IPPAny<IDirectFB, _IDirectFB>::~IPPAny()
+0000b794 t $d
+0000b7a0 t $a
+0000b7a0 W IPPAny<IDirectFB, _IDirectFB>::~IPPAny()
+0000b830 t $d
+0000b838 t $a
+0000b838 T IDirectFB::SetCooperativeLevel(DFBCooperativeLevel)
+0000b948 t $d
+0000b958 t $a
+0000b958 T IDirectFB::SetVideoMode(unsigned int, unsigned int, unsigned int)
+0000ba74 t $d
+0000ba84 t $a
+0000ba84 T IDirectFB::GetDeviceDescription(DFBGraphicsDeviceDescription*)
+0000bb94 t $d
+0000bba4 t $a
+0000bba4 T IDirectFB::EnumVideoModes(DFBEnumerationResult (*)(int, int, int, void*), void*)
+0000bcbc t $d
+0000bccc t $a
+0000bccc T IDirectFB::CreateSurface(DFBSurfaceDescription&) const
+0000bdfc t $d
+0000be0c t $a
+0000be0c T IDirectFB::CreatePalette(DFBPaletteDescription&)
+0000bf3c t $d
+0000bf4c t $a
+0000bf4c T IDirectFB::EnumDisplayLayers(DFBEnumerationResult (*)(unsigned int, DFBDisplayLayerDescription, void*), void*)
+0000c064 t $d
+0000c074 t $a
+0000c074 T IDirectFB::GetScreen(unsigned int)
+0000c1a4 t $d
+0000c1b4 t $a
+0000c1b4 T IDirectFB::EnumScreens(DFBEnumerationResult (*)(unsigned int, DFBScreenDescription, void*), void*)
+0000c2cc t $d
+0000c2dc t $a
+0000c2dc T IDirectFB::GetDisplayLayer(unsigned int)
+0000c40c t $d
+0000c41c t $a
+0000c41c T IDirectFB::EnumInputDevices(DFBEnumerationResult (*)(unsigned int, DFBInputDeviceDescription, void*), void*) const
+0000c534 t $d
+0000c544 t $a
+0000c544 T IDirectFB::GetInputDevice(unsigned int) const
+0000c674 t $d
+0000c684 t $a
+0000c684 T IDirectFB::CreateEventBuffer() const
+0000c7b0 t $d
+0000c7c0 t $a
+0000c7c0 T IDirectFB::CreateInputEventBuffer(DFBInputDeviceCapabilities, DFBBoolean)
+0000c8f8 t $d
+0000c908 t $a
+0000c908 T IDirectFB::CreateImageProvider(char const*) const
+0000ca38 t $d
+0000ca48 t $a
+0000ca48 T IDirectFB::CreateVideoProvider(char const*)
+0000cb78 t $d
+0000cb88 t $a
+0000cb88 T IDirectFB::CreateFont(char const*, DFBFontDescription&) const
+0000ccc0 t $d
+0000ccd0 t $a
+0000ccd0 T IDirectFB::CreateDataBuffer(DFBDataBufferDescription&)
+0000ce00 t $d
+0000ce10 t $a
+0000ce10 T IDirectFB::SetClipboardData(char const*, void const*, unsigned int)
+0000cf40 t $d
+0000cf50 t $a
+0000cf50 T IDirectFB::GetClipboardData(char**, void**, unsigned int*)
+0000d070 t $d
+0000d080 t $a
+0000d080 T IDirectFB::GetClipboardTimeStamp()
+0000d198 t $d
+0000d1a8 t $a
+0000d1a8 T IDirectFB::Suspend()
+0000d2b0 t $d
+0000d2c0 t $a
+0000d2c0 T IDirectFB::Resume()
+0000d3c8 t $d
+0000d3d8 t $a
+0000d3d8 T IDirectFB::WaitIdle()
+0000d4e0 t $d
+0000d4f0 t $a
+0000d4f0 T IDirectFB::WaitForSync()
+0000d5f8 t $d
+0000d608 t $a
+0000d608 T IDirectFB::GetInterface(char const*, char const*, void*)
+0000d73c t $d
+0000d74c t $a
+0000d74c T IDirectFB::GetSurface(unsigned int) const
+0000d87c t $d
+0000d88c t $a
+0000d88c t __static_initialization_and_destruction_0(int, int)
+0000d958 t $d
+0000d978 t $a
+0000d978 t _GLOBAL__sub_I_idirectfb.cpp
+0000d9c4 t $d
+0000d9cc t $a
+0000d9cc W IDirectFBScreen::IDirectFBScreen(_IDirectFBScreen*)
+0000d9cc W IDirectFBScreen::IDirectFBScreen(_IDirectFBScreen*)
+0000da74 t $d
+0000da80 t $a
+0000da80 W IDirectFBDisplayLayer::IDirectFBDisplayLayer(_IDirectFBDisplayLayer*)
+0000da80 W IDirectFBDisplayLayer::IDirectFBDisplayLayer(_IDirectFBDisplayLayer*)
+0000db28 t $d
+0000db34 t $a
+0000db34 W IDirectFBSurface::IDirectFBSurface(_IDirectFBSurface*)
+0000db34 W IDirectFBSurface::IDirectFBSurface(_IDirectFBSurface*)
+0000dbdc t $d
+0000dbe8 t $a
+0000dbe8 W IDirectFBPalette::IDirectFBPalette(_IDirectFBPalette*)
+0000dbe8 W IDirectFBPalette::IDirectFBPalette(_IDirectFBPalette*)
+0000dc90 t $d
+0000dc9c t $a
+0000dc9c W IDirectFBInputDevice::IDirectFBInputDevice(_IDirectFBInputDevice*)
+0000dc9c W IDirectFBInputDevice::IDirectFBInputDevice(_IDirectFBInputDevice*)
+0000dd44 t $d
+0000dd50 t $a
+0000dd50 W IDirectFBEventBuffer::IDirectFBEventBuffer(_IDirectFBEventBuffer*)
+0000dd50 W IDirectFBEventBuffer::IDirectFBEventBuffer(_IDirectFBEventBuffer*)
+0000ddf8 t $d
+0000de04 t $a
+0000de04 W IDirectFBFont::IDirectFBFont(_IDirectFBFont*)
+0000de04 W IDirectFBFont::IDirectFBFont(_IDirectFBFont*)
+0000deac t $d
+0000deb8 t $a
+0000deb8 W IDirectFBImageProvider::IDirectFBImageProvider(_IDirectFBImageProvider*)
+0000deb8 W IDirectFBImageProvider::IDirectFBImageProvider(_IDirectFBImageProvider*)
+0000df60 t $d
+0000df6c t $a
+0000df6c W IDirectFBVideoProvider::IDirectFBVideoProvider(_IDirectFBVideoProvider*)
+0000df6c W IDirectFBVideoProvider::IDirectFBVideoProvider(_IDirectFBVideoProvider*)
+0000e014 t $d
+0000e020 t $a
+0000e020 W IDirectFBDataBuffer::IDirectFBDataBuffer(_IDirectFBDataBuffer*)
+0000e020 W IDirectFBDataBuffer::IDirectFBDataBuffer(_IDirectFBDataBuffer*)
+0000e0c8 t $d
+0000e0d4 t $a
+0000e0d4 W IPPAny<IDirectFBScreen, _IDirectFBScreen>::IPPAny(_IDirectFBScreen*)
+0000e0d4 W IPPAny<IDirectFBScreen, _IDirectFBScreen>::IPPAny(_IDirectFBScreen*)
+0000e158 t $d
+0000e164 t $a
+0000e164 W IPPAny<IDirectFBScreen, _IDirectFBScreen>::~IPPAny()
+0000e164 W IPPAny<IDirectFBScreen, _IDirectFBScreen>::~IPPAny()
+0000e238 t $d
+0000e244 t $a
+0000e244 W IPPAny<IDirectFBScreen, _IDirectFBScreen>::~IPPAny()
+0000e2d4 t $d
+0000e2dc t $a
+0000e2dc W IPPAny<IDirectFBDisplayLayer, _IDirectFBDisplayLayer>::IPPAny(_IDirectFBDisplayLayer*)
+0000e2dc W IPPAny<IDirectFBDisplayLayer, _IDirectFBDisplayLayer>::IPPAny(_IDirectFBDisplayLayer*)
+0000e360 t $d
+0000e36c t $a
+0000e36c W IPPAny<IDirectFBDisplayLayer, _IDirectFBDisplayLayer>::~IPPAny()
+0000e36c W IPPAny<IDirectFBDisplayLayer, _IDirectFBDisplayLayer>::~IPPAny()
+0000e440 t $d
+0000e44c t $a
+0000e44c W IPPAny<IDirectFBDisplayLayer, _IDirectFBDisplayLayer>::~IPPAny()
+0000e4dc t $d
+0000e4e4 t $a
+0000e4e4 W IPPAny<IDirectFBSurface, _IDirectFBSurface>::IPPAny(_IDirectFBSurface*)
+0000e4e4 W IPPAny<IDirectFBSurface, _IDirectFBSurface>::IPPAny(_IDirectFBSurface*)
+0000e568 t $d
+0000e574 t $a
+0000e574 W IPPAny<IDirectFBSurface, _IDirectFBSurface>::~IPPAny()
+0000e574 W IPPAny<IDirectFBSurface, _IDirectFBSurface>::~IPPAny()
+0000e648 t $d
+0000e654 t $a
+0000e654 W IPPAny<IDirectFBSurface, _IDirectFBSurface>::~IPPAny()
+0000e6e4 t $d
+0000e6ec t $a
+0000e6ec W IPPAny<IDirectFBPalette, _IDirectFBPalette>::IPPAny(_IDirectFBPalette*)
+0000e6ec W IPPAny<IDirectFBPalette, _IDirectFBPalette>::IPPAny(_IDirectFBPalette*)
+0000e770 t $d
+0000e77c t $a
+0000e77c W IPPAny<IDirectFBPalette, _IDirectFBPalette>::~IPPAny()
+0000e77c W IPPAny<IDirectFBPalette, _IDirectFBPalette>::~IPPAny()
+0000e850 t $d
+0000e85c t $a
+0000e85c W IPPAny<IDirectFBPalette, _IDirectFBPalette>::~IPPAny()
+0000e8ec t $d
+0000e8f4 t $a
+0000e8f4 W IPPAny<IDirectFBInputDevice, _IDirectFBInputDevice>::IPPAny(_IDirectFBInputDevice*)
+0000e8f4 W IPPAny<IDirectFBInputDevice, _IDirectFBInputDevice>::IPPAny(_IDirectFBInputDevice*)
+0000e978 t $d
+0000e984 t $a
+0000e984 W IPPAny<IDirectFBInputDevice, _IDirectFBInputDevice>::~IPPAny()
+0000e984 W IPPAny<IDirectFBInputDevice, _IDirectFBInputDevice>::~IPPAny()
+0000ea58 t $d
+0000ea64 t $a
+0000ea64 W IPPAny<IDirectFBInputDevice, _IDirectFBInputDevice>::~IPPAny()
+0000eaf4 t $d
+0000eafc t $a
+0000eafc W IPPAny<IDirectFBEventBuffer, _IDirectFBEventBuffer>::IPPAny(_IDirectFBEventBuffer*)
+0000eafc W IPPAny<IDirectFBEventBuffer, _IDirectFBEventBuffer>::IPPAny(_IDirectFBEventBuffer*)
+0000eb80 t $d
+0000eb8c t $a
+0000eb8c W IPPAny<IDirectFBEventBuffer, _IDirectFBEventBuffer>::~IPPAny()
+0000eb8c W IPPAny<IDirectFBEventBuffer, _IDirectFBEventBuffer>::~IPPAny()
+0000ec60 t $d
+0000ec6c t $a
+0000ec6c W IPPAny<IDirectFBEventBuffer, _IDirectFBEventBuffer>::~IPPAny()
+0000ecfc t $d
+0000ed04 t $a
+0000ed04 W IPPAny<IDirectFBFont, _IDirectFBFont>::IPPAny(_IDirectFBFont*)
+0000ed04 W IPPAny<IDirectFBFont, _IDirectFBFont>::IPPAny(_IDirectFBFont*)
+0000ed88 t $d
+0000ed94 t $a
+0000ed94 W IPPAny<IDirectFBFont, _IDirectFBFont>::~IPPAny()
+0000ed94 W IPPAny<IDirectFBFont, _IDirectFBFont>::~IPPAny()
+0000ee68 t $d
+0000ee74 t $a
+0000ee74 W IPPAny<IDirectFBFont, _IDirectFBFont>::~IPPAny()
+0000ef04 t $d
+0000ef0c t $a
+0000ef0c W IPPAny<IDirectFBImageProvider, _IDirectFBImageProvider>::IPPAny(_IDirectFBImageProvider*)
+0000ef0c W IPPAny<IDirectFBImageProvider, _IDirectFBImageProvider>::IPPAny(_IDirectFBImageProvider*)
+0000ef90 t $d
+0000ef9c t $a
+0000ef9c W IPPAny<IDirectFBImageProvider, _IDirectFBImageProvider>::~IPPAny()
+0000ef9c W IPPAny<IDirectFBImageProvider, _IDirectFBImageProvider>::~IPPAny()
+0000f070 t $d
+0000f07c t $a
+0000f07c W IPPAny<IDirectFBImageProvider, _IDirectFBImageProvider>::~IPPAny()
+0000f10c t $d
+0000f114 t $a
+0000f114 W IPPAny<IDirectFBVideoProvider, _IDirectFBVideoProvider>::IPPAny(_IDirectFBVideoProvider*)
+0000f114 W IPPAny<IDirectFBVideoProvider, _IDirectFBVideoProvider>::IPPAny(_IDirectFBVideoProvider*)
+0000f198 t $d
+0000f1a4 t $a
+0000f1a4 W IPPAny<IDirectFBVideoProvider, _IDirectFBVideoProvider>::~IPPAny()
+0000f1a4 W IPPAny<IDirectFBVideoProvider, _IDirectFBVideoProvider>::~IPPAny()
+0000f278 t $d
+0000f284 t $a
+0000f284 W IPPAny<IDirectFBVideoProvider, _IDirectFBVideoProvider>::~IPPAny()
+0000f314 t $d
+0000f31c t $a
+0000f31c W IPPAny<IDirectFBDataBuffer, _IDirectFBDataBuffer>::IPPAny(_IDirectFBDataBuffer*)
+0000f31c W IPPAny<IDirectFBDataBuffer, _IDirectFBDataBuffer>::IPPAny(_IDirectFBDataBuffer*)
+0000f3a0 t $d
+0000f3ac t $a
+0000f3ac W IPPAny<IDirectFBDataBuffer, _IDirectFBDataBuffer>::~IPPAny()
+0000f3ac W IPPAny<IDirectFBDataBuffer, _IDirectFBDataBuffer>::~IPPAny()
+0000f480 t $d
+0000f48c t $a
+0000f48c W IPPAny<IDirectFBDataBuffer, _IDirectFBDataBuffer>::~IPPAny()
+0000f51c t $d
+0000f524 t $a
+0000f524 W IDirectFBDataBuffer::~IDirectFBDataBuffer()
+0000f524 W IDirectFBDataBuffer::~IDirectFBDataBuffer()
+0000f5d8 t $d
+0000f5e4 t $a
+0000f5e4 W IDirectFBDataBuffer::~IDirectFBDataBuffer()
+0000f674 t $d
+0000f67c t $a
+0000f67c W IDirectFBVideoProvider::~IDirectFBVideoProvider()
+0000f67c W IDirectFBVideoProvider::~IDirectFBVideoProvider()
+0000f730 t $d
+0000f73c t $a
+0000f73c W IDirectFBVideoProvider::~IDirectFBVideoProvider()
+0000f7cc t $d
+0000f7d4 t $a
+0000f7d4 W IDirectFBImageProvider::~IDirectFBImageProvider()
+0000f7d4 W IDirectFBImageProvider::~IDirectFBImageProvider()
+0000f888 t $d
+0000f894 t $a
+0000f894 W IDirectFBImageProvider::~IDirectFBImageProvider()
+0000f924 t $d
+0000f92c t $a
+0000f92c W IDirectFBFont::~IDirectFBFont()
+0000f92c W IDirectFBFont::~IDirectFBFont()
+0000f9e0 t $d
+0000f9ec t $a
+0000f9ec W IDirectFBFont::~IDirectFBFont()
+0000fa7c t $d
+0000fa84 t $a
+0000fa84 W IDirectFBEventBuffer::~IDirectFBEventBuffer()
+0000fa84 W IDirectFBEventBuffer::~IDirectFBEventBuffer()
+0000fb38 t $d
+0000fb44 t $a
+0000fb44 W IDirectFBEventBuffer::~IDirectFBEventBuffer()
+0000fbd4 t $d
+0000fbdc t $a
+0000fbdc W IDirectFBInputDevice::~IDirectFBInputDevice()
+0000fbdc W IDirectFBInputDevice::~IDirectFBInputDevice()
+0000fc90 t $d
+0000fc9c t $a
+0000fc9c W IDirectFBInputDevice::~IDirectFBInputDevice()
+0000fd2c t $d
+0000fd34 t $a
+0000fd34 W IDirectFBPalette::~IDirectFBPalette()
+0000fd34 W IDirectFBPalette::~IDirectFBPalette()
+0000fde8 t $d
+0000fdf4 t $a
+0000fdf4 W IDirectFBPalette::~IDirectFBPalette()
+0000fe84 t $d
+0000fe8c t $a
+0000fe8c W IDirectFBSurface::~IDirectFBSurface()
+0000fe8c W IDirectFBSurface::~IDirectFBSurface()
+0000ff40 t $d
+0000ff4c t $a
+0000ff4c W IDirectFBSurface::~IDirectFBSurface()
+0000ffdc t $d
+0000ffe4 t $a
+0000ffe4 W IDirectFBDisplayLayer::~IDirectFBDisplayLayer()
+0000ffe4 W IDirectFBDisplayLayer::~IDirectFBDisplayLayer()
+00010098 t $d
+000100a4 t $a
+000100a4 W IDirectFBDisplayLayer::~IDirectFBDisplayLayer()
+00010134 t $d
+0001013c t $a
+0001013c W IDirectFBScreen::~IDirectFBScreen()
+0001013c W IDirectFBScreen::~IDirectFBScreen()
+000101f0 t $d
+000101fc t $a
+000101fc W IDirectFBScreen::~IDirectFBScreen()
+0001028c t $d
+00010294 t $a
+00010294 T IDirectFBDataBuffer::Flush()
+0001039c t $d
+000103ac t $a
+000103ac T IDirectFBDataBuffer::Finish()
+000104b4 t $d
+000104c4 t $a
+000104c4 T IDirectFBDataBuffer::SeekTo(unsigned int)
+000105d4 t $d
+000105e4 t $a
+000105e4 T IDirectFBDataBuffer::GetPosition()
+00010700 t $d
+00010710 t $a
+00010710 T IDirectFBDataBuffer::GetLength()
+0001082c t $d
+0001083c t $a
+0001083c T IDirectFBDataBuffer::WaitForData(unsigned int)
+0001094c t $d
+0001095c t $a
+0001095c T IDirectFBDataBuffer::WaitForDataWithTimeout(unsigned int, unsigned int, unsigned int)
+00010a7c t $d
+00010a8c t $a
+00010a8c T IDirectFBDataBuffer::GetData(unsigned int, void*)
+00010bd0 t $d
+00010be0 t $a
+00010be0 T IDirectFBDataBuffer::PeekData(unsigned int, int, void*)
+00010d30 t $d
+00010d40 t $a
+00010d40 T IDirectFBDataBuffer::HasData()
+00010e78 t $d
+00010e88 t $a
+00010e88 T IDirectFBDataBuffer::PutData(void const*, unsigned int)
+00010fa0 t $d
+00010fb0 t $a
+00010fb0 T IDirectFBDataBuffer::CreateImageProvider()
+000110dc t $d
+000110ec t $a
+000110ec T IDirectFBDataBuffer::CreateVideoProvider()
+00011218 t $d
+00011228 t $a
+00011228 t __static_initialization_and_destruction_0(int, int)
+000112f4 t $d
+00011314 t $a
+00011314 t _GLOBAL__sub_I_idirectfbdatabuffer.cpp
+00011360 t $d
+00011368 t $a
+00011368 T IDirectFBDisplayLayer::GetID()
+00011484 t $d
+00011494 t $a
+00011494 T IDirectFBDisplayLayer::GetDescription()
+000115ac t $d
+000115bc t $a
+000115bc T IDirectFBDisplayLayer::GetSourceDescriptions(DFBDisplayLayerSourceDescription*)
+000116cc t $d
+000116dc t $a
+000116dc T IDirectFBDisplayLayer::GetSurface()
+00011808 t $d
+00011818 t $a
+00011818 T IDirectFBDisplayLayer::GetScreen()
+00011944 t $d
+00011954 t $a
+00011954 T IDirectFBDisplayLayer::SetCooperativeLevel(DFBDisplayLayerCooperativeLevel)
+00011a64 t $d
+00011a74 t $a
+00011a74 T IDirectFBDisplayLayer::SetOpacity(unsigned char)
+00011b8c t $d
+00011b9c t $a
+00011b9c T IDirectFBDisplayLayer::SetSourceRectangle(int, int, int, int)
+00011cc4 t $d
+00011cd4 t $a
+00011cd4 T IDirectFBDisplayLayer::SetScreenLocation(float, float, float, float)
+00011dfc t $d
+00011e0c t $a
+00011e0c T IDirectFBDisplayLayer::SetScreenPosition(int, int)
+00011f24 t $d
+00011f34 t $a
+00011f34 T IDirectFBDisplayLayer::SetScreenRectangle(int, int, int, int)
+0001205c t $d
+0001206c t $a
+0001206c T IDirectFBDisplayLayer::SetClipRegions(DFBRegion const*, int, DFBBoolean)
+0001218c t $d
+0001219c t $a
+0001219c T IDirectFBDisplayLayer::SetSrcColorKey(unsigned char, unsigned char, unsigned char)
+000122b8 t $d
+000122c8 t $a
+000122c8 T IDirectFBDisplayLayer::SetDstColorKey(unsigned char, unsigned char, unsigned char)
+000123e4 t $d
+000123f4 t $a
+000123f4 T IDirectFBDisplayLayer::GetLevel()
+00012510 t $d
+00012520 t $a
+00012520 T IDirectFBDisplayLayer::SetLevel(int)
+00012630 t $d
+00012640 t $a
+00012640 T IDirectFBDisplayLayer::GetCurrentOutputField()
+0001275c t $d
+0001276c t $a
+0001276c T IDirectFBDisplayLayer::SetFieldParity(int)
+0001287c t $d
+0001288c t $a
+0001288c T IDirectFBDisplayLayer::WaitForSync()
+00012994 t $d
+000129a4 t $a
+000129a4 T IDirectFBDisplayLayer::GetConfiguration(DFBDisplayLayerConfig*)
+00012ab4 t $d
+00012ac4 t $a
+00012ac4 T IDirectFBDisplayLayer::TestConfiguration(DFBDisplayLayerConfig&, DFBDisplayLayerConfigFlags*)
+00012bdc t $d
+00012bec t $a
+00012bec T IDirectFBDisplayLayer::SetConfiguration(DFBDisplayLayerConfig&)
+00012cfc t $d
+00012d0c t $a
+00012d0c T IDirectFBDisplayLayer::SetBackgroundMode(DFBDisplayLayerBackgroundMode)
+00012e1c t $d
+00012e2c t $a
+00012e2c T IDirectFBDisplayLayer::SetBackgroundImage(IDirectFBSurface*)
+00012f4c t $d
+00012f5c t $a
+00012f5c T IDirectFBDisplayLayer::SetBackgroundColor(unsigned char, unsigned char, unsigned char, unsigned char)
+00013080 t $d
+00013090 t $a
+00013090 T IDirectFBDisplayLayer::GetColorAdjustment(DFBColorAdjustment*)
+000131a0 t $d
+000131b0 t $a
+000131b0 T IDirectFBDisplayLayer::SetColorAdjustment(DFBColorAdjustment&)
+000132c0 t $d
+000132d0 t $a
+000132d0 T IDirectFBDisplayLayer::CreateWindow(DFBWindowDescription&)
+00013400 t $d
+00013410 t $a
+00013410 T IDirectFBDisplayLayer::GetWindow(unsigned int)
+00013540 t $d
+00013550 t $a
+00013550 T IDirectFBDisplayLayer::EnableCursor(bool)
+00013668 t $d
+00013678 t $a
+00013678 T IDirectFBDisplayLayer::GetCursorPosition(int*, int*)
+00013790 t $d
+000137a0 t $a
+000137a0 T IDirectFBDisplayLayer::WarpCursor(int, int)
+000138b8 t $d
+000138c8 t $a
+000138c8 T IDirectFBDisplayLayer::SetCursorAcceleration(int, int, int)
+000139e8 t $d
+000139f8 t $a
+000139f8 T IDirectFBDisplayLayer::SetCursorShape(IDirectFBSurface*, int, int)
+00013b28 t $d
+00013b38 t $a
+00013b38 T IDirectFBDisplayLayer::SetCursorOpacity(unsigned char)
+00013c50 t $d
+00013c60 t $a
+00013c60 T IDirectFBDisplayLayer::SwitchContext(DFBBoolean)
+00013d70 t $d
+00013d80 t $a
+00013d80 t __static_initialization_and_destruction_0(int, int)
+00013e4c t $d
+00013e6c t $a
+00013e6c t _GLOBAL__sub_I_idirectfbdisplaylayer.cpp
+00013eb8 t $d
+00013ec0 t $a
+00013ec0 W IDirectFBWindow::IDirectFBWindow(_IDirectFBWindow*)
+00013ec0 W IDirectFBWindow::IDirectFBWindow(_IDirectFBWindow*)
+00013f68 t $d
+00013f74 t $a
+00013f74 W IPPAny<IDirectFBWindow, _IDirectFBWindow>::IPPAny(_IDirectFBWindow*)
+00013f74 W IPPAny<IDirectFBWindow, _IDirectFBWindow>::IPPAny(_IDirectFBWindow*)
+00013ff8 t $d
+00014004 t $a
+00014004 W IPPAny<IDirectFBWindow, _IDirectFBWindow>::~IPPAny()
+00014004 W IPPAny<IDirectFBWindow, _IDirectFBWindow>::~IPPAny()
+000140d8 t $d
+000140e4 t $a
+000140e4 W IPPAny<IDirectFBWindow, _IDirectFBWindow>::~IPPAny()
+00014174 t $d
+0001417c t $a
+0001417c W IPPAny<IDirectFBSurface, _IDirectFBSurface>::get_iface()
+000141e0 t $d
+000141e8 t $a
+000141e8 W IDirectFBWindow::~IDirectFBWindow()
+000141e8 W IDirectFBWindow::~IDirectFBWindow()
+0001429c t $d
+000142a8 t $a
+000142a8 W IDirectFBWindow::~IDirectFBWindow()
+00014338 t $d
+00014340 t $a
+00014340 T IDirectFBEventBuffer::Reset()
+00014448 t $d
+00014458 t $a
+00014458 T IDirectFBEventBuffer::WaitForEvent()
+00014560 t $d
+00014570 t $a
+00014570 T IDirectFBEventBuffer::WaitForEventWithTimeout(unsigned int, unsigned int)
+000146b8 t $d
+000146c8 t $a
+000146c8 T IDirectFBEventBuffer::WakeUp()
+000147d0 t $d
+000147e0 t $a
+000147e0 T IDirectFBEventBuffer::GetEvent(DFBEvent*)
+00014920 t $d
+00014930 t $a
+00014930 T IDirectFBEventBuffer::PeekEvent(DFBEvent*)
+00014a70 t $d
+00014a80 t $a
+00014a80 T IDirectFBEventBuffer::HasEvent()
+00014bb8 t $d
+00014bc8 t $a
+00014bc8 T IDirectFBEventBuffer::PostEvent(DFBEvent&)
+00014cd8 t $d
+00014ce8 t $a
+00014ce8 T IDirectFBEventBuffer::CreateFileDescriptor()
+00014e04 t $d
+00014e14 t $a
+00014e14 T IDirectFBEventBuffer::EnableStatistics(DFBBoolean)
+00014f24 t $d
+00014f34 t $a
+00014f34 T IDirectFBEventBuffer::GetStatistics(DFBEventBufferStats*)
+00015044 t $d
+00015054 t $a
+00015054 t __static_initialization_and_destruction_0(int, int)
+00015120 t $d
+00015140 t $a
+00015140 t _GLOBAL__sub_I_idirectfbeventbuffer.cpp
+0001518c t $d
+00015194 t $a
+00015194 T IDirectFBFont::GetAscender() const
+000152b0 t $d
+000152c0 t $a
+000152c0 T IDirectFBFont::GetDescender() const
+000153dc t $d
+000153ec t $a
+000153ec T IDirectFBFont::GetHeight() const
+00015508 t $d
+00015518 t $a
+00015518 T IDirectFBFont::GetMaxAdvance() const
+00015634 t $d
+00015644 t $a
+00015644 T IDirectFBFont::GetKerning(unsigned int, unsigned int, int*, int*) const
+0001576c t $d
+0001577c t $a
+0001577c T IDirectFBFont::GetStringBreak(char const*, int, int, int*, int*, char const**) const
+000158b4 t $d
+000158c4 t $a
+000158c4 T IDirectFBFont::GetStringWidth(char const*, int) const
+000159ec t $d
+000159fc t $a
+000159fc T IDirectFBFont::GetStringExtents(char const*, int, DFBRectangle*, DFBRectangle*) const
+00015b24 t $d
+00015b34 t $a
+00015b34 T IDirectFBFont::GetGlyphExtents(unsigned int, DFBRectangle*, int*) const
+00015c54 t $d
+00015c64 t $a
+00015c64 T IDirectFBFont::SetEncoding(unsigned int)
+00015d74 t $d
+00015d84 t $a
+00015d84 T IDirectFBFont::EnumEncodings(DFBEnumerationResult (*)(unsigned int, char const*, void*), void*)
+00015e9c t $d
+00015eac t $a
+00015eac T IDirectFBFont::FindEncoding(char const*, unsigned int*)
+00015fc4 t $d
+00015fd4 t $a
+00015fd4 t __static_initialization_and_destruction_0(int, int)
+000160a0 t $d
+000160c0 t $a
+000160c0 t _GLOBAL__sub_I_idirectfbfont.cpp
+0001610c t $d
+00016114 t $a
+00016114 T IDirectFBImageProvider::GetSurfaceDescription(DFBSurfaceDescription*)
+00016224 t $d
+00016234 t $a
+00016234 T IDirectFBImageProvider::GetImageDescription(DFBImageDescription*)
+00016344 t $d
+00016354 t $a
+00016354 T IDirectFBImageProvider::RenderTo(IDirectFBSurface*, DFBRectangle*)
+0001647c t $d
+0001648c t $a
+0001648c T IDirectFBImageProvider::SetRenderCallback(DIRenderCallbackResult (*)(DFBRectangle_C*, void*), void*)
+000165a4 t $d
+000165b4 t $a
+000165b4 t __static_initialization_and_destruction_0(int, int)
+00016680 t $d
+000166a0 t $a
+000166a0 t _GLOBAL__sub_I_idirectfbimageprovider.cpp
+000166ec t $d
+000166f4 t $a
+000166f4 T IDirectFBInputDevice::GetID()
+00016810 t $d
+00016820 t $a
+00016820 T IDirectFBInputDevice::GetDescription(DFBInputDeviceDescription*)
+00016930 t $d
+00016940 t $a
+00016940 T IDirectFBInputDevice::GetKeymapEntry(int, DFBInputDeviceKeymapEntry*)
+00016a58 t $d
+00016a68 t $a
+00016a68 T IDirectFBInputDevice::CreateEventBuffer()
+00016b94 t $d
+00016ba4 t $a
+00016ba4 T IDirectFBInputDevice::AttachEventBuffer(IDirectFBEventBuffer*)
+00016cc4 t $d
+00016cd4 t $a
+00016cd4 T IDirectFBInputDevice::DetachEventBuffer(IDirectFBEventBuffer*)
+00016df4 t $d
+00016e04 t $a
+00016e04 T IDirectFBInputDevice::GetKeyState(DFBInputDeviceKeyIdentifier)
+00016f24 t $d
+00016f34 t $a
+00016f34 T IDirectFBInputDevice::GetModifiers()
+00017050 t $d
+00017060 t $a
+00017060 T IDirectFBInputDevice::GetLockState()
+0001717c t $d
+0001718c t $a
+0001718c T IDirectFBInputDevice::GetButtons()
+000172a8 t $d
+000172b8 t $a
+000172b8 T IDirectFBInputDevice::GetButtonState(DFBInputDeviceButtonIdentifier)
+000173d8 t $d
+000173e8 t $a
+000173e8 T IDirectFBInputDevice::GetAxis(DFBInputDeviceAxisIdentifier)
+00017508 t $d
+00017518 t $a
+00017518 T IDirectFBInputDevice::GetXY(int*, int*)
+00017630 t $d
+00017640 t $a
+00017640 t __static_initialization_and_destruction_0(int, int)
+0001770c t $d
+0001772c t $a
+0001772c t _GLOBAL__sub_I_idirectfbinputdevice.cpp
+00017778 t $d
+00017780 t $a
+00017780 W IPPAny<IDirectFBEventBuffer, _IDirectFBEventBuffer>::get_iface()
+000177e4 t $d
+000177ec t $a
+000177ec T IDirectFBPalette::GetCapabilities()
+00017908 t $d
+00017918 t $a
+00017918 T IDirectFBPalette::GetSize()
+00017a34 t $d
+00017a44 t $a
+00017a44 T IDirectFBPalette::SetEntries(DFBColor*, unsigned int, unsigned int)
+00017b64 t $d
+00017b74 t $a
+00017b74 T IDirectFBPalette::GetEntries(DFBColor*, unsigned int, unsigned int)
+00017c94 t $d
+00017ca4 t $a
+00017ca4 T IDirectFBPalette::FindBestMatch(unsigned char, unsigned char, unsigned char, unsigned char)
+00017ddc t $d
+00017dec t $a
+00017dec T IDirectFBPalette::CreateCopy()
+00017f18 t $d
+00017f28 t $a
+00017f28 t __static_initialization_and_destruction_0(int, int)
+00017ff4 t $d
+00018014 t $a
+00018014 t _GLOBAL__sub_I_idirectfbpalette.cpp
+00018060 t $d
+00018068 t $a
+00018068 T IDirectFBScreen::GetID()
+00018184 t $d
+00018194 t $a
+00018194 T IDirectFBScreen::GetDescription()
+000182ac t $d
+000182bc t $a
+000182bc T IDirectFBScreen::GetSize(int*, int*)
+000183d4 t $d
+000183e4 t $a
+000183e4 T IDirectFBScreen::EnumDisplayLayers(DFBEnumerationResult (*)(unsigned int, DFBDisplayLayerDescription, void*), void*)
+000184fc t $d
+0001850c t $a
+0001850c T IDirectFBScreen::WaitForSync()
+00018614 t $d
+00018624 t $a
+00018624 T IDirectFBScreen::SetPowerMode(DFBScreenPowerMode)
+00018734 t $d
+00018744 t $a
+00018744 T IDirectFBScreen::GetMixerDescriptions(DFBScreenMixerDescription*)
+00018854 t $d
+00018864 t $a
+00018864 T IDirectFBScreen::GetMixerConfiguration(int, DFBScreenMixerConfig*)
+0001897c t $d
+0001898c t $a
+0001898c T IDirectFBScreen::TestMixerConfiguration(int, DFBScreenMixerConfig const&, DFBScreenMixerConfigFlags*)
+00018aac t $d
+00018abc t $a
+00018abc T IDirectFBScreen::SetMixerConfiguration(int, DFBScreenMixerConfig const&)
+00018bd4 t $d
+00018be4 t $a
+00018be4 T IDirectFBScreen::GetEncoderDescriptions(DFBScreenEncoderDescription*)
+00018cf4 t $d
+00018d04 t $a
+00018d04 T IDirectFBScreen::GetEncoderConfiguration(int, DFBScreenEncoderConfig*)
+00018e1c t $d
+00018e2c t $a
+00018e2c T IDirectFBScreen::TestEncoderConfiguration(int, DFBScreenEncoderConfig const&, DFBScreenEncoderConfigFlags*)
+00018f4c t $d
+00018f5c t $a
+00018f5c T IDirectFBScreen::SetEncoderConfiguration(int, DFBScreenEncoderConfig const&)
+00019074 t $d
+00019084 t $a
+00019084 T IDirectFBScreen::GetOutputDescriptions(DFBScreenOutputDescription*)
+00019194 t $d
+000191a4 t $a
+000191a4 T IDirectFBScreen::GetOutputConfiguration(int, DFBScreenOutputConfig*)
+000192bc t $d
+000192cc t $a
+000192cc T IDirectFBScreen::TestOutputConfiguration(int, DFBScreenOutputConfig const&, DFBScreenOutputConfigFlags*)
+000193ec t $d
+000193fc t $a
+000193fc T IDirectFBScreen::SetOutputConfiguration(int, DFBScreenOutputConfig const&)
+00019514 t $d
+00019524 t $a
+00019524 t __static_initialization_and_destruction_0(int, int)
+000195f0 t $d
+00019610 t $a
+00019610 t _GLOBAL__sub_I_idirectfbscreen.cpp
+0001965c t $d
+00019664 t $a
+00019664 T IDirectFBSurface::GetCapabilities()
+00019780 t $d
+00019790 t $a
+00019790 T IDirectFBSurface::GetPosition(int*, int*)
+000198a8 t $d
+000198b8 t $a
+000198b8 T IDirectFBSurface::GetSize(int*, int*)
+000199d0 t $d
+000199e0 t $a
+000199e0 T IDirectFBSurface::GetVisibleRectangle(DFBRectangle*)
+00019af0 t $d
+00019b00 t $a
+00019b00 T IDirectFBSurface::GetPixelFormat()
+00019c1c t $d
+00019c2c t $a
+00019c2c T IDirectFBSurface::GetAccelerationMask(IDirectFBSurface*)
+00019d60 t $d
+00019d70 t $a
+00019d70 T IDirectFBSurface::GetPalette()
+00019e9c t $d
+00019eac t $a
+00019eac T IDirectFBSurface::SetPalette(IDirectFBPalette*)
+00019fcc t $d
+00019fdc t $a
+00019fdc T IDirectFBSurface::SetAlphaRamp(unsigned char, unsigned char, unsigned char, unsigned char)
+0001a100 t $d
+0001a110 t $a
+0001a110 T IDirectFBSurface::Lock(DFBSurfaceLockFlags, void**, int*)
+0001a230 t $d
+0001a240 t $a
+0001a240 T IDirectFBSurface::Unlock()
+0001a348 t $d
+0001a358 t $a
+0001a358 T IDirectFBSurface::Flip(DFBRegion*, DFBSurfaceFlipFlags)
+0001a470 t $d
+0001a480 t $a
+0001a480 T IDirectFBSurface::SetField(int)
+0001a590 t $d
+0001a5a0 t $a
+0001a5a0 T IDirectFBSurface::Clear(unsigned char, unsigned char, unsigned char, unsigned char)
+0001a6c4 t $d
+0001a6d4 t $a
+0001a6d4 T IDirectFBSurface::Clear(DFBColor&)
+0001a800 t $d
+0001a810 t $a
+0001a810 T IDirectFBSurface::SetClip(DFBRegion const*)
+0001a920 t $d
+0001a930 t $a
+0001a930 T IDirectFBSurface::SetClip(DFBRectangle const*)
+0001aa58 t $d
+0001aa68 t $a
+0001aa68 T IDirectFBSurface::SetColor(unsigned char, unsigned char, unsigned char, unsigned char)
+0001ab8c t $d
+0001ab9c t $a
+0001ab9c T IDirectFBSurface::SetColor(DFBColor&)
+0001acc8 t $d
+0001acd8 t $a
+0001acd8 T IDirectFBSurface::SetColorIndex(unsigned int)
+0001ade8 t $d
+0001adf8 t $a
+0001adf8 T IDirectFBSurface::SetSrcBlendFunction(DFBSurfaceBlendFunction)
+0001af08 t $d
+0001af18 t $a
+0001af18 T IDirectFBSurface::SetDstBlendFunction(DFBSurfaceBlendFunction)
+0001b028 t $d
+0001b038 t $a
+0001b038 T IDirectFBSurface::SetPorterDuff(DFBSurfacePorterDuffRule)
+0001b148 t $d
+0001b158 t $a
+0001b158 T IDirectFBSurface::SetSrcColorKey(unsigned char, unsigned char, unsigned char)
+0001b274 t $d
+0001b284 t $a
+0001b284 T IDirectFBSurface::SetSrcColorKeyIndex(unsigned int)
+0001b394 t $d
+0001b3a4 t $a
+0001b3a4 T IDirectFBSurface::SetDstColorKey(unsigned char, unsigned char, unsigned char)
+0001b4c0 t $d
+0001b4d0 t $a
+0001b4d0 T IDirectFBSurface::SetDstColorKeyIndex(unsigned int)
+0001b5e0 t $d
+0001b5f0 t $a
+0001b5f0 T IDirectFBSurface::SetBlittingFlags(DFBSurfaceBlittingFlags)
+0001b700 t $d
+0001b710 t $a
+0001b710 T IDirectFBSurface::Blit(IDirectFBSurface*, DFBRectangle const*, int, int)
+0001b848 t $d
+0001b858 t $a
+0001b858 T IDirectFBSurface::TileBlit(IDirectFBSurface*, DFBRectangle const*, int, int)
+0001b990 t $d
+0001b9a0 t $a
+0001b9a0 T IDirectFBSurface::BatchBlit(IDirectFBSurface*, DFBRectangle const*, DFBPoint const*, int)
+0001bad8 t $d
+0001bae8 t $a
+0001bae8 T IDirectFBSurface::StretchBlit(IDirectFBSurface*, DFBRectangle const*, DFBRectangle const*)
+0001bc18 t $d
+0001bc28 t $a
+0001bc28 T IDirectFBSurface::TextureTriangles(IDirectFBSurface*, DFBVertex const*, int const*, int, DFBTriangleFormation)
+0001bd68 t $d
+0001bd78 t $a
+0001bd78 T IDirectFBSurface::SetDrawingFlags(DFBSurfaceDrawingFlags)
+0001be88 t $d
+0001be98 t $a
+0001be98 T IDirectFBSurface::FillRectangle(int, int, int, int)
+0001bfc0 t $d
+0001bfd0 t $a
+0001bfd0 T IDirectFBSurface::FillRectangle(DFBRectangle&)
+0001c0fc t $d
+0001c10c t $a
+0001c10c T IDirectFBSurface::FillRectangle(DFBRegion&)
+0001c258 t $d
+0001c268 t $a
+0001c268 T IDirectFBSurface::DrawRectangle(int, int, int, int)
+0001c390 t $d
+0001c3a0 t $a
+0001c3a0 T IDirectFBSurface::DrawLine(int, int, int, int)
+0001c4c8 t $d
+0001c4d8 t $a
+0001c4d8 T IDirectFBSurface::DrawLines(DFBRegion const*, unsigned int)
+0001c5f0 t $d
+0001c600 t $a
+0001c600 T IDirectFBSurface::FillRectangles(DFBRectangle const*, unsigned int)
+0001c718 t $d
+0001c728 t $a
+0001c728 T IDirectFBSurface::FillTriangle(int, int, int, int, int, int)
+0001c860 t $d
+0001c870 t $a
+0001c870 T IDirectFBSurface::FillSpans(int, DFBSpan const*, unsigned int)
+0001c990 t $d
+0001c9a0 t $a
+0001c9a0 T IDirectFBSurface::SetFont(IDirectFBFont const&) const
+0001cac0 t $d
+0001cad0 t $a
+0001cad0 T IDirectFBSurface::GetFont() const
+0001cbfc t $d
+0001cc0c t $a
+0001cc0c T IDirectFBSurface::DrawString(char const*, int, int, int, DFBSurfaceTextFlags)
+0001cd3c t $d
+0001cd4c t $a
+0001cd4c T IDirectFBSurface::DrawGlyph(unsigned int, int, int, DFBSurfaceTextFlags)
+0001ce74 t $d
+0001ce84 t $a
+0001ce84 T IDirectFBSurface::SetEncoding(unsigned int)
+0001cf94 t $d
+0001cfa4 t $a
+0001cfa4 T IDirectFBSurface::GetSubSurface(DFBRectangle*)
+0001d0d4 t $d
+0001d0e4 t $a
+0001d0e4 T IDirectFBSurface::GetWidth()
+0001d178 t $d
+0001d180 t $a
+0001d180 T IDirectFBSurface::GetHeight()
+0001d214 t $d
+0001d21c t $a
+0001d21c T IDirectFBSurface::SetColor(DFBColor const&)
+0001d348 t $d
+0001d358 t $a
+0001d358 T IDirectFBSurface::SetColor(DFBColor const*)
+0001d484 t $d
+0001d494 t $a
+0001d494 T IDirectFBSurface::FillRectangle(DFBRectangle const&)
+0001d5c0 t $d
+0001d5d0 t $a
+0001d5d0 T IDirectFBSurface::DrawRectangle(DFBRectangle const&)
+0001d6fc t $d
+0001d70c t $a
+0001d70c T IDirectFBSurface::DrawLine(DFBRegion const&)
+0001d838 t $d
+0001d848 t $a
+0001d848 T IDirectFBSurface::GetSubSurface(int, int, int, int)
+0001d9a0 t $d
+0001d9b0 t $a
+0001d9b0 T IDirectFBSurface::Dump(char const*, char const*)
+0001dac8 t $d
+0001dad8 t $a
+0001dad8 T IDirectFBSurface::DisableAcceleration(DFBAccelerationMask)
+0001dbe8 t $d
+0001dbf8 t $a
+0001dbf8 T IDirectFBSurface::GetGL()
+0001dd14 t $d
+0001dd24 t $a
+0001dd24 T IDirectFBSurface::GetID()
+0001de40 t $d
+0001de50 t $a
+0001de50 T IDirectFBSurface::AllowAccess(char const*)
+0001df60 t $d
+0001df70 t $a
+0001df70 T IDirectFBSurface::GetClip(DFBRegion*)
+0001e080 t $d
+0001e090 t $a
+0001e090 T IDirectFBSurface::GetFramebufferOffset()
+0001e1ac t $d
+0001e1bc t $a
+0001e1bc T IDirectFBSurface::ReleaseSource()
+0001e2c4 t $d
+0001e2d4 t $a
+0001e2d4 T IDirectFBSurface::SetIndexTranslation(int const*, int)
+0001e3ec t $d
+0001e3fc t $a
+0001e3fc T IDirectFBSurface::Read(void*, int, DFBRectangle const*)
+0001e56c t $d
+0001e57c t $a
+0001e57c T IDirectFBSurface::Write(void const*, int, DFBRectangle const*)
+0001e6ec t $d
+0001e6fc t $a
+0001e6fc t __static_initialization_and_destruction_0(int, int)
+0001e7c8 t $d
+0001e7e8 t $a
+0001e7e8 t _GLOBAL__sub_I_idirectfbsurface.cpp
+0001e834 t $d
+0001e83c t $a
+0001e83c W DFBRectangle_C::DFBRectangle_C()
+0001e83c W DFBRectangle_C::DFBRectangle_C()
+0001e89c t $d
+0001e8a4 t $a
+0001e8a4 W DFBRectangle::DFBRectangle()
+0001e8a4 W DFBRectangle::DFBRectangle()
+0001e940 t $d
+0001e948 t $a
+0001e948 W DFBRectangle::DFBRectangle(int const&, int const&, int const&, int const&)
+0001e948 W DFBRectangle::DFBRectangle(int const&, int const&, int const&, int const&)
+0001ea00 t $d
+0001ea08 t $a
+0001ea08 W DFBRegion_C::DFBRegion_C()
+0001ea08 W DFBRegion_C::DFBRegion_C()
+0001ea68 t $d
+0001ea70 t $a
+0001ea70 W DFBRegion::DFBRegion(DFBRectangle_C const&)
+0001ea70 W DFBRegion::DFBRegion(DFBRectangle_C const&)
+0001eb40 t $d
+0001eb48 t $a
+0001eb48 W IPPAny<IDirectFBPalette, _IDirectFBPalette>::get_iface()
+0001ebac t $d
+0001ebb4 t $a
+0001ebb4 W IPPAny<IDirectFBFont, _IDirectFBFont>::get_iface() const
+0001ec18 t $d
+0001ec20 t $a
+0001ec20 T IDirectFBVideoProvider::GetCapabilities()
+0001ed3c t $d
+0001ed4c t $a
+0001ed4c T IDirectFBVideoProvider::GetSurfaceDescription(DFBSurfaceDescription*)
+0001ee5c t $d
+0001ee6c t $a
+0001ee6c T IDirectFBVideoProvider::GetStreamDescription(DFBStreamDescription*)
+0001ef7c t $d
+0001ef8c t $a
+0001ef8c T IDirectFBVideoProvider::PlayTo(IDirectFBSurface*, DFBRectangle*, void (*)(void*), void*)
+0001f0c4 t $d
+0001f0d4 t $a
+0001f0d4 T IDirectFBVideoProvider::Stop()
+0001f1dc t $d
+0001f1ec t $a
+0001f1ec T IDirectFBVideoProvider::GetStatus()
+0001f308 t $d
+0001f318 t $a
+0001f318 T IDirectFBVideoProvider::SeekTo(double)
+0001f428 t $d
+0001f438 t $a
+0001f438 T IDirectFBVideoProvider::GetPos()
+0001f55c t $d
+0001f56c t $a
+0001f56c T IDirectFBVideoProvider::GetLength()
+0001f690 t $d
+0001f6a0 t $a
+0001f6a0 T IDirectFBVideoProvider::GetColorAdjustment(DFBColorAdjustment*)
+0001f7b0 t $d
+0001f7c0 t $a
+0001f7c0 T IDirectFBVideoProvider::SetColorAdjustment(DFBColorAdjustment&)
+0001f8d0 t $d
+0001f8e0 t $a
+0001f8e0 T IDirectFBVideoProvider::SendEvent(DFBEvent&)
+0001f9f0 t $d
+0001fa00 t $a
+0001fa00 T IDirectFBVideoProvider::SetPlaybackFlags(DFBVideoProviderPlaybackFlags)
+0001fb10 t $d
+0001fb20 t $a
+0001fb20 T IDirectFBVideoProvider::SetSpeed(double)
+0001fc30 t $d
+0001fc40 t $a
+0001fc40 T IDirectFBVideoProvider::GetSpeed()
+0001fd74 t $d
+0001fd84 t $a
+0001fd84 T IDirectFBVideoProvider::SetVolume(float)
+0001fe94 t $d
+0001fea4 t $a
+0001fea4 T IDirectFBVideoProvider::GetVolume()
+0001ffcc t $d
+0001ffdc t $a
+0001ffdc t __static_initialization_and_destruction_0(int, int)
+000200a8 t $d
+000200c8 t $a
+000200c8 t _GLOBAL__sub_I_idirectfbvideoprovider.cpp
+00020114 t $d
+0002011c t $a
+0002011c T IDirectFBWindow::GetID()
+00020238 t $d
+00020248 t $a
+00020248 T IDirectFBWindow::GetPosition(int*, int*)
+00020360 t $d
+00020370 t $a
+00020370 T IDirectFBWindow::GetSize(int*, int*)
+00020488 t $d
+00020498 t $a
+00020498 T IDirectFBWindow::CreateEventBuffer()
+000205c4 t $d
+000205d4 t $a
+000205d4 T IDirectFBWindow::AttachEventBuffer(IDirectFBEventBuffer*)
+000206f4 t $d
+00020704 t $a
+00020704 T IDirectFBWindow::DetachEventBuffer(IDirectFBEventBuffer*)
+00020824 t $d
+00020834 t $a
+00020834 T IDirectFBWindow::EnableEvents(DFBWindowEventType)
+00020944 t $d
+00020954 t $a
+00020954 T IDirectFBWindow::DisableEvents(DFBWindowEventType)
+00020a64 t $d
+00020a74 t $a
+00020a74 T IDirectFBWindow::GetSurface()
+00020ba0 t $d
+00020bb0 t $a
+00020bb0 T IDirectFBWindow::SetOptions(DFBWindowOptions)
+00020cc0 t $d
+00020cd0 t $a
+00020cd0 T IDirectFBWindow::GetOptions()
+00020dec t $d
+00020dfc t $a
+00020dfc T IDirectFBWindow::SetColorKey(unsigned char, unsigned char, unsigned char)
+00020f18 t $d
+00020f28 t $a
+00020f28 T IDirectFBWindow::SetColorKeyIndex(unsigned int)
+00021038 t $d
+00021048 t $a
+00021048 T IDirectFBWindow::SetOpacity(unsigned char)
+00021160 t $d
+00021170 t $a
+00021170 T IDirectFBWindow::SetOpaqueRegion(int, int, int, int)
+00021298 t $d
+000212a8 t $a
+000212a8 T IDirectFBWindow::GetOpacity()
+000213c4 t $d
+000213d4 t $a
+000213d4 T IDirectFBWindow::SetCursorShape(IDirectFBSurface*, int, int)
+00021504 t $d
+00021514 t $a
+00021514 T IDirectFBWindow::RequestFocus()
+0002161c t $d
+0002162c t $a
+0002162c T IDirectFBWindow::GrabKeyboard()
+00021734 t $d
+00021744 t $a
+00021744 T IDirectFBWindow::UngrabKeyboard()
+0002184c t $d
+0002185c t $a
+0002185c T IDirectFBWindow::GrabPointer()
+00021964 t $d
+00021974 t $a
+00021974 T IDirectFBWindow::UngrabPointer()
+00021a7c t $d
+00021a8c t $a
+00021a8c T IDirectFBWindow::GrabKey(DFBInputDeviceKeySymbol, DFBInputDeviceModifierMask)
+00021ba4 t $d
+00021bb4 t $a
+00021bb4 T IDirectFBWindow::UngrabKey(DFBInputDeviceKeySymbol, DFBInputDeviceModifierMask)
+00021ccc t $d
+00021cdc t $a
+00021cdc T IDirectFBWindow::Move(int, int)
+00021df4 t $d
+00021e04 t $a
+00021e04 T IDirectFBWindow::MoveTo(int, int)
+00021f1c t $d
+00021f2c t $a
+00021f2c T IDirectFBWindow::Resize(int, int)
+00022044 t $d
+00022054 t $a
+00022054 T IDirectFBWindow::SetStackingClass(DFBWindowStackingClass)
+00022164 t $d
+00022174 t $a
+00022174 T IDirectFBWindow::Raise()
+0002227c t $d
+0002228c t $a
+0002228c T IDirectFBWindow::Lower()
+00022394 t $d
+000223a4 t $a
+000223a4 T IDirectFBWindow::RaiseToTop()
+000224ac t $d
+000224bc t $a
+000224bc T IDirectFBWindow::LowerToBottom()
+000225c4 t $d
+000225d4 t $a
+000225d4 T IDirectFBWindow::PutAtop(IDirectFBWindow*)
+000226ec t $d
+000226fc t $a
+000226fc T IDirectFBWindow::PutBelow(IDirectFBWindow*)
+00022814 t $d
+00022824 t $a
+00022824 T IDirectFBWindow::Close()
+0002292c t $d
+0002293c t $a
+0002293c T IDirectFBWindow::Destroy()
+00022a44 t $d
+00022a54 t $a
+00022a54 T IDirectFBWindow::SetBounds(int, int, int, int)
+00022b7c t $d
+00022b8c t $a
+00022b8c T IDirectFBWindow::ResizeSurface(int, int)
+00022ca4 t $d
+00022cb4 t $a
+00022cb4 T IDirectFBWindow::BeginUpdates(DFBRegion const*)
+00022dc4 t $d
+00022dd4 t $a
+00022dd4 T IDirectFBWindow::SetDstGeometry(DFBWindowGeometry*)
+00022ee4 t $d
+00022ef4 t $a
+00022ef4 T IDirectFBWindow::SetSrcGeometry(DFBWindowGeometry*)
+00023004 t $d
+00023014 t $a
+00023014 t __static_initialization_and_destruction_0(int, int)
+000230e0 t $d
+00023100 t $a
+00023100 t _GLOBAL__sub_I_idirectfbwindow.cpp
+0002314c t $d
+00023154 t $a
+00023154 T _fini
+00023158 t $a
+0002315c r $d
+00023180 r DirectFB::Init(int*, char***)::__FUNCTION__
+00023188 r DirectFB::Create()::__FUNCTION__
+00023190 r $d
+00023190 V typeinfo name for DFBException*
+000231a0 r $d
+000231a0 V typeinfo name for IDirectFB
+000231ac r $d
+000231ac V typeinfo name for IPPAny<IDirectFB, _IDirectFB>
+000231cc r $d
+000231cc V typeinfo name for DFBException
+000231dc r $d
+000231ec r IDirectFB::SetCooperativeLevel(DFBCooperativeLevel)::__FUNCTION__
+00023200 r IDirectFB::SetVideoMode(unsigned int, unsigned int, unsigned int)::__FUNCTION__
+00023210 r IDirectFB::GetDeviceDescription(DFBGraphicsDeviceDescription*)::__FUNCTION__
+00023228 r IDirectFB::EnumVideoModes(DFBEnumerationResult (*)(int, int, int, void*), void*)::__FUNCTION__
+00023238 r IDirectFB::CreateSurface(DFBSurfaceDescription&) const::__FUNCTION__
+00023248 r IDirectFB::CreatePalette(DFBPaletteDescription&)::__FUNCTION__
+00023258 r IDirectFB::EnumDisplayLayers(DFBEnumerationResult (*)(unsigned int, DFBDisplayLayerDescription, void*), void*)::__FUNCTION__
+0002326c r IDirectFB::GetScreen(unsigned int)::__FUNCTION__
+00023278 r IDirectFB::EnumScreens(DFBEnumerationResult (*)(unsigned int, DFBScreenDescription, void*), void*)::__FUNCTION__
+00023284 r IDirectFB::GetDisplayLayer(unsigned int)::__FUNCTION__
+00023294 r IDirectFB::EnumInputDevices(DFBEnumerationResult (*)(unsigned int, DFBInputDeviceDescription, void*), void*) const::__FUNCTION__
+000232a8 r IDirectFB::GetInputDevice(unsigned int) const::__FUNCTION__
+000232b8 r IDirectFB::CreateEventBuffer() const::__FUNCTION__
+000232cc r IDirectFB::CreateInputEventBuffer(DFBInputDeviceCapabilities, DFBBoolean)::__FUNCTION__
+000232e4 r IDirectFB::CreateImageProvider(char const*) const::__FUNCTION__
+000232f8 r IDirectFB::CreateVideoProvider(char const*)::__FUNCTION__
+0002330c r IDirectFB::CreateFont(char const*, DFBFontDescription&) const::__FUNCTION__
+00023318 r IDirectFB::CreateDataBuffer(DFBDataBufferDescription&)::__FUNCTION__
+0002332c r IDirectFB::SetClipboardData(char const*, void const*, unsigned int)::__FUNCTION__
+00023340 r IDirectFB::GetClipboardData(char**, void**, unsigned int*)::__FUNCTION__
+00023354 r IDirectFB::GetClipboardTimeStamp()::__FUNCTION__
+0002336c r IDirectFB::Suspend()::__FUNCTION__
+00023374 r IDirectFB::Resume()::__FUNCTION__
+0002337c r IDirectFB::WaitIdle()::__FUNCTION__
+00023388 r IDirectFB::WaitForSync()::__FUNCTION__
+00023394 r IDirectFB::GetInterface(char const*, char const*, void*)::__FUNCTION__
+000233a4 r IDirectFB::GetSurface(unsigned int) const::__FUNCTION__
+000233b0 r $d
+000233b0 V typeinfo name for IDirectFBDataBuffer
+000233c8 r $d
+000233c8 V typeinfo name for IPPAny<IDirectFBDataBuffer, _IDirectFBDataBuffer>
+00023400 r $d
+00023400 V typeinfo name for IDirectFBVideoProvider
+0002341c r $d
+0002341c V typeinfo name for IPPAny<IDirectFBVideoProvider, _IDirectFBVideoProvider>
+00023458 r $d
+00023458 V typeinfo name for IDirectFBImageProvider
+00023474 r $d
+00023474 V typeinfo name for IPPAny<IDirectFBImageProvider, _IDirectFBImageProvider>
+000234b0 r $d
+000234b0 V typeinfo name for IDirectFBFont
+000234c0 r $d
+000234c0 V typeinfo name for IPPAny<IDirectFBFont, _IDirectFBFont>
+000234ec r $d
+000234ec V typeinfo name for IDirectFBEventBuffer
+00023504 r $d
+00023504 V typeinfo name for IPPAny<IDirectFBEventBuffer, _IDirectFBEventBuffer>
+0002353c r $d
+0002353c V typeinfo name for IDirectFBInputDevice
+00023554 r $d
+00023554 V typeinfo name for IPPAny<IDirectFBInputDevice, _IDirectFBInputDevice>
+0002358c r $d
+0002358c V typeinfo name for IDirectFBPalette
+000235a0 r $d
+000235a0 V typeinfo name for IPPAny<IDirectFBPalette, _IDirectFBPalette>
+000235d0 r $d
+000235d0 V typeinfo name for IDirectFBSurface
+000235e4 r $d
+000235e4 V typeinfo name for IPPAny<IDirectFBSurface, _IDirectFBSurface>
+00023614 r $d
+00023614 V typeinfo name for IDirectFBDisplayLayer
+0002362c r $d
+0002362c V typeinfo name for IPPAny<IDirectFBDisplayLayer, _IDirectFBDisplayLayer>
+00023668 r $d
+00023668 V typeinfo name for IDirectFBScreen
+0002367c r $d
+0002367c V typeinfo name for IPPAny<IDirectFBScreen, _IDirectFBScreen>
+000236ac r $d
+000236bc r IDirectFBDataBuffer::Flush()::__FUNCTION__
+000236c4 r IDirectFBDataBuffer::Finish()::__FUNCTION__
+000236cc r IDirectFBDataBuffer::SeekTo(unsigned int)::__FUNCTION__
+000236d4 r IDirectFBDataBuffer::GetPosition()::__FUNCTION__
+000236e0 r IDirectFBDataBuffer::GetLength()::__FUNCTION__
+000236ec r IDirectFBDataBuffer::WaitForData(unsigned int)::__FUNCTION__
+000236f8 r IDirectFBDataBuffer::WaitForDataWithTimeout(unsigned int, unsigned int, unsigned int)::__FUNCTION__
+00023710 r IDirectFBDataBuffer::GetData(unsigned int, void*)::__FUNCTION__
+00023718 r IDirectFBDataBuffer::PeekData(unsigned int, int, void*)::__FUNCTION__
+00023724 r IDirectFBDataBuffer::HasData()::__FUNCTION__
+0002372c r IDirectFBDataBuffer::PutData(void const*, unsigned int)::__FUNCTION__
+00023734 r IDirectFBDataBuffer::CreateImageProvider()::__FUNCTION__
+00023748 r IDirectFBDataBuffer::CreateVideoProvider()::__FUNCTION__
+0002375c r $d
+0002376c r IDirectFBDisplayLayer::GetID()::__FUNCTION__
+00023774 r IDirectFBDisplayLayer::GetDescription()::__FUNCTION__
+00023784 r IDirectFBDisplayLayer::GetSourceDescriptions(DFBDisplayLayerSourceDescription*)::__FUNCTION__
+0002379c r IDirectFBDisplayLayer::GetSurface()::__FUNCTION__
+000237a8 r IDirectFBDisplayLayer::GetScreen()::__FUNCTION__
+000237b4 r IDirectFBDisplayLayer::SetCooperativeLevel(DFBDisplayLayerCooperativeLevel)::__FUNCTION__
+000237c8 r IDirectFBDisplayLayer::SetOpacity(unsigned char)::__FUNCTION__
+000237d4 r IDirectFBDisplayLayer::SetSourceRectangle(int, int, int, int)::__FUNCTION__
+000237e8 r IDirectFBDisplayLayer::SetScreenLocation(float, float, float, float)::__FUNCTION__
+000237fc r IDirectFBDisplayLayer::SetScreenPosition(int, int)::__FUNCTION__
+00023810 r IDirectFBDisplayLayer::SetScreenRectangle(int, int, int, int)::__FUNCTION__
+00023824 r IDirectFBDisplayLayer::SetClipRegions(DFBRegion const*, int, DFBBoolean)::__FUNCTION__
+00023834 r IDirectFBDisplayLayer::SetSrcColorKey(unsigned char, unsigned char, unsigned char)::__FUNCTION__
+00023844 r IDirectFBDisplayLayer::SetDstColorKey(unsigned char, unsigned char, unsigned char)::__FUNCTION__
+00023854 r IDirectFBDisplayLayer::GetLevel()::__FUNCTION__
+00023860 r IDirectFBDisplayLayer::SetLevel(int)::__FUNCTION__
+0002386c r IDirectFBDisplayLayer::GetCurrentOutputField()::__FUNCTION__
+00023884 r IDirectFBDisplayLayer::SetFieldParity(int)::__FUNCTION__
+00023894 r IDirectFBDisplayLayer::WaitForSync()::__FUNCTION__
+000238a0 r IDirectFBDisplayLayer::GetConfiguration(DFBDisplayLayerConfig*)::__FUNCTION__
+000238b4 r IDirectFBDisplayLayer::TestConfiguration(DFBDisplayLayerConfig&, DFBDisplayLayerConfigFlags*)::__FUNCTION__
+000238c8 r IDirectFBDisplayLayer::SetConfiguration(DFBDisplayLayerConfig&)::__FUNCTION__
+000238dc r IDirectFBDisplayLayer::SetBackgroundMode(DFBDisplayLayerBackgroundMode)::__FUNCTION__
+000238f0 r IDirectFBDisplayLayer::SetBackgroundImage(IDirectFBSurface*)::__FUNCTION__
+00023904 r IDirectFBDisplayLayer::SetBackgroundColor(unsigned char, unsigned char, unsigned char, unsigned char)::__FUNCTION__
+00023918 r IDirectFBDisplayLayer::GetColorAdjustment(DFBColorAdjustment*)::__FUNCTION__
+0002392c r IDirectFBDisplayLayer::SetColorAdjustment(DFBColorAdjustment&)::__FUNCTION__
+00023940 r IDirectFBDisplayLayer::CreateWindow(DFBWindowDescription&)::__FUNCTION__
+00023950 r IDirectFBDisplayLayer::GetWindow(unsigned int)::__FUNCTION__
+0002395c r IDirectFBDisplayLayer::EnableCursor(bool)::__FUNCTION__
+0002396c r IDirectFBDisplayLayer::GetCursorPosition(int*, int*)::__FUNCTION__
+00023980 r IDirectFBDisplayLayer::WarpCursor(int, int)::__FUNCTION__
+0002398c r IDirectFBDisplayLayer::SetCursorAcceleration(int, int, int)::__FUNCTION__
+000239a4 r IDirectFBDisplayLayer::SetCursorShape(IDirectFBSurface*, int, int)::__FUNCTION__
+000239b4 r IDirectFBDisplayLayer::SetCursorOpacity(unsigned char)::__FUNCTION__
+000239c8 r IDirectFBDisplayLayer::SwitchContext(DFBBoolean)::__FUNCTION__
+000239d8 r $d
+000239d8 V typeinfo name for IDirectFBWindow
+000239ec r $d
+000239ec V typeinfo name for IPPAny<IDirectFBWindow, _IDirectFBWindow>
+00023a1c r $d
+00023a2c r IDirectFBEventBuffer::Reset()::__FUNCTION__
+00023a34 r IDirectFBEventBuffer::WaitForEvent()::__FUNCTION__
+00023a44 r IDirectFBEventBuffer::WaitForEventWithTimeout(unsigned int, unsigned int)::__FUNCTION__
+00023a5c r IDirectFBEventBuffer::WakeUp()::__FUNCTION__
+00023a64 r IDirectFBEventBuffer::GetEvent(DFBEvent*)::__FUNCTION__
+00023a70 r IDirectFBEventBuffer::PeekEvent(DFBEvent*)::__FUNCTION__
+00023a7c r IDirectFBEventBuffer::HasEvent()::__FUNCTION__
+00023a88 r IDirectFBEventBuffer::PostEvent(DFBEvent&)::__FUNCTION__
+00023a94 r IDirectFBEventBuffer::CreateFileDescriptor()::__FUNCTION__
+00023aac r IDirectFBEventBuffer::EnableStatistics(DFBBoolean)::__FUNCTION__
+00023ac0 r IDirectFBEventBuffer::GetStatistics(DFBEventBufferStats*)::__FUNCTION__
+00023ad0 r $d
+00023ae0 r IDirectFBFont::GetAscender() const::__FUNCTION__
+00023aec r IDirectFBFont::GetDescender() const::__FUNCTION__
+00023afc r IDirectFBFont::GetHeight() const::__FUNCTION__
+00023b08 r IDirectFBFont::GetMaxAdvance() const::__FUNCTION__
+00023b18 r IDirectFBFont::GetKerning(unsigned int, unsigned int, int*, int*) const::__FUNCTION__
+00023b24 r IDirectFBFont::GetStringBreak(char const*, int, int, int*, int*, char const**) const::__FUNCTION__
+00023b34 r IDirectFBFont::GetStringWidth(char const*, int) const::__FUNCTION__
+00023b44 r IDirectFBFont::GetStringExtents(char const*, int, DFBRectangle*, DFBRectangle*) const::__FUNCTION__
+00023b58 r IDirectFBFont::GetGlyphExtents(unsigned int, DFBRectangle*, int*) const::__FUNCTION__
+00023b68 r IDirectFBFont::SetEncoding(unsigned int)::__FUNCTION__
+00023b74 r IDirectFBFont::EnumEncodings(DFBEnumerationResult (*)(unsigned int, char const*, void*), void*)::__FUNCTION__
+00023b84 r IDirectFBFont::FindEncoding(char const*, unsigned int*)::__FUNCTION__
+00023b94 r $d
+00023ba4 r IDirectFBImageProvider::GetSurfaceDescription(DFBSurfaceDescription*)::__FUNCTION__
+00023bbc r IDirectFBImageProvider::GetImageDescription(DFBImageDescription*)::__FUNCTION__
+00023bd0 r IDirectFBImageProvider::RenderTo(IDirectFBSurface*, DFBRectangle*)::__FUNCTION__
+00023bdc r IDirectFBImageProvider::SetRenderCallback(DIRenderCallbackResult (*)(DFBRectangle_C*, void*), void*)::__FUNCTION__
+00023bf0 r $d
+00023c00 r IDirectFBInputDevice::GetID()::__FUNCTION__
+00023c08 r IDirectFBInputDevice::GetDescription(DFBInputDeviceDescription*)::__FUNCTION__
+00023c18 r IDirectFBInputDevice::GetKeymapEntry(int, DFBInputDeviceKeymapEntry*)::__FUNCTION__
+00023c28 r IDirectFBInputDevice::CreateEventBuffer()::__FUNCTION__
+00023c3c r IDirectFBInputDevice::AttachEventBuffer(IDirectFBEventBuffer*)::__FUNCTION__
+00023c50 r IDirectFBInputDevice::DetachEventBuffer(IDirectFBEventBuffer*)::__FUNCTION__
+00023c64 r IDirectFBInputDevice::GetKeyState(DFBInputDeviceKeyIdentifier)::__FUNCTION__
+00023c70 r IDirectFBInputDevice::GetModifiers()::__FUNCTION__
+00023c80 r IDirectFBInputDevice::GetLockState()::__FUNCTION__
+00023c90 r IDirectFBInputDevice::GetButtons()::__FUNCTION__
+00023c9c r IDirectFBInputDevice::GetButtonState(DFBInputDeviceButtonIdentifier)::__FUNCTION__
+00023cac r IDirectFBInputDevice::GetAxis(DFBInputDeviceAxisIdentifier)::__FUNCTION__
+00023cb4 r IDirectFBInputDevice::GetXY(int*, int*)::__FUNCTION__
+00023cbc r $d
+00023ccc r IDirectFBPalette::GetCapabilities()::__FUNCTION__
+00023cdc r IDirectFBPalette::GetSize()::__FUNCTION__
+00023ce4 r IDirectFBPalette::SetEntries(DFBColor*, unsigned int, unsigned int)::__FUNCTION__
+00023cf0 r IDirectFBPalette::GetEntries(DFBColor*, unsigned int, unsigned int)::__FUNCTION__
+00023cfc r IDirectFBPalette::FindBestMatch(unsigned char, unsigned char, unsigned char, unsigned char)::__FUNCTION__
+00023d0c r IDirectFBPalette::CreateCopy()::__FUNCTION__
+00023d18 r $d
+00023d28 r IDirectFBScreen::GetID()::__FUNCTION__
+00023d30 r IDirectFBScreen::GetDescription()::__FUNCTION__
+00023d40 r IDirectFBScreen::GetSize(int*, int*)::__FUNCTION__
+00023d48 r IDirectFBScreen::EnumDisplayLayers(DFBEnumerationResult (*)(unsigned int, DFBDisplayLayerDescription, void*), void*)::__FUNCTION__
+00023d5c r IDirectFBScreen::WaitForSync()::__FUNCTION__
+00023d68 r IDirectFBScreen::SetPowerMode(DFBScreenPowerMode)::__FUNCTION__
+00023d78 r IDirectFBScreen::GetMixerDescriptions(DFBScreenMixerDescription*)::__FUNCTION__
+00023d90 r IDirectFBScreen::GetMixerConfiguration(int, DFBScreenMixerConfig*)::__FUNCTION__
+00023da8 r IDirectFBScreen::TestMixerConfiguration(int, DFBScreenMixerConfig const&, DFBScreenMixerConfigFlags*)::__FUNCTION__
+00023dc0 r IDirectFBScreen::SetMixerConfiguration(int, DFBScreenMixerConfig const&)::__FUNCTION__
+00023dd8 r IDirectFBScreen::GetEncoderDescriptions(DFBScreenEncoderDescription*)::__FUNCTION__
+00023df0 r IDirectFBScreen::GetEncoderConfiguration(int, DFBScreenEncoderConfig*)::__FUNCTION__
+00023e08 r IDirectFBScreen::TestEncoderConfiguration(int, DFBScreenEncoderConfig const&, DFBScreenEncoderConfigFlags*)::__FUNCTION__
+00023e24 r IDirectFBScreen::SetEncoderConfiguration(int, DFBScreenEncoderConfig const&)::__FUNCTION__
+00023e3c r IDirectFBScreen::GetOutputDescriptions(DFBScreenOutputDescription*)::__FUNCTION__
+00023e54 r IDirectFBScreen::GetOutputConfiguration(int, DFBScreenOutputConfig*)::__FUNCTION__
+00023e6c r IDirectFBScreen::TestOutputConfiguration(int, DFBScreenOutputConfig const&, DFBScreenOutputConfigFlags*)::__FUNCTION__
+00023e84 r IDirectFBScreen::SetOutputConfiguration(int, DFBScreenOutputConfig const&)::__FUNCTION__
+00023e9c r $d
+00023eac r IDirectFBSurface::GetCapabilities()::__FUNCTION__
+00023ebc r IDirectFBSurface::GetPosition(int*, int*)::__FUNCTION__
+00023ec8 r IDirectFBSurface::GetSize(int*, int*)::__FUNCTION__
+00023ed0 r IDirectFBSurface::GetVisibleRectangle(DFBRectangle*)::__FUNCTION__
+00023ee4 r IDirectFBSurface::GetPixelFormat()::__FUNCTION__
+00023ef4 r IDirectFBSurface::GetAccelerationMask(IDirectFBSurface*)::__FUNCTION__
+00023f08 r IDirectFBSurface::GetPalette()::__FUNCTION__
+00023f14 r IDirectFBSurface::SetPalette(IDirectFBPalette*)::__FUNCTION__
+00023f20 r IDirectFBSurface::SetAlphaRamp(unsigned char, unsigned char, unsigned char, unsigned char)::__FUNCTION__
+00023f30 r IDirectFBSurface::Lock(DFBSurfaceLockFlags, void**, int*)::__FUNCTION__
+00023f38 r IDirectFBSurface::Unlock()::__FUNCTION__
+00023f40 r IDirectFBSurface::Flip(DFBRegion*, DFBSurfaceFlipFlags)::__FUNCTION__
+00023f48 r IDirectFBSurface::SetField(int)::__FUNCTION__
+00023f54 r IDirectFBSurface::Clear(unsigned char, unsigned char, unsigned char, unsigned char)::__FUNCTION__
+00023f5c r IDirectFBSurface::Clear(DFBColor&)::__FUNCTION__
+00023f64 r IDirectFBSurface::SetClip(DFBRegion const*)::__FUNCTION__
+00023f6c r IDirectFBSurface::SetClip(DFBRectangle const*)::__FUNCTION__
+00023f74 r IDirectFBSurface::SetColor(unsigned char, unsigned char, unsigned char, unsigned char)::__FUNCTION__
+00023f80 r IDirectFBSurface::SetColor(DFBColor&)::__FUNCTION__
+00023f8c r IDirectFBSurface::SetColorIndex(unsigned int)::__FUNCTION__
+00023f9c r IDirectFBSurface::SetSrcBlendFunction(DFBSurfaceBlendFunction)::__FUNCTION__
+00023fb0 r IDirectFBSurface::SetDstBlendFunction(DFBSurfaceBlendFunction)::__FUNCTION__
+00023fc4 r IDirectFBSurface::SetPorterDuff(DFBSurfacePorterDuffRule)::__FUNCTION__
+00023fd4 r IDirectFBSurface::SetSrcColorKey(unsigned char, unsigned char, unsigned char)::__FUNCTION__
+00023fe4 r IDirectFBSurface::SetSrcColorKeyIndex(unsigned int)::__FUNCTION__
+00023ff8 r IDirectFBSurface::SetDstColorKey(unsigned char, unsigned char, unsigned char)::__FUNCTION__
+00024008 r IDirectFBSurface::SetDstColorKeyIndex(unsigned int)::__FUNCTION__
+0002401c r IDirectFBSurface::SetBlittingFlags(DFBSurfaceBlittingFlags)::__FUNCTION__
+00024030 r IDirectFBSurface::Blit(IDirectFBSurface*, DFBRectangle const*, int, int)::__FUNCTION__
+00024038 r IDirectFBSurface::TileBlit(IDirectFBSurface*, DFBRectangle const*, int, int)::__FUNCTION__
+00024044 r IDirectFBSurface::BatchBlit(IDirectFBSurface*, DFBRectangle const*, DFBPoint const*, int)::__FUNCTION__
+00024050 r IDirectFBSurface::StretchBlit(IDirectFBSurface*, DFBRectangle const*, DFBRectangle const*)::__FUNCTION__
+0002405c r IDirectFBSurface::TextureTriangles(IDirectFBSurface*, DFBVertex const*, int const*, int, DFBTriangleFormation)::__FUNCTION__
+00024070 r IDirectFBSurface::SetDrawingFlags(DFBSurfaceDrawingFlags)::__FUNCTION__
+00024080 r IDirectFBSurface::FillRectangle(int, int, int, int)::__FUNCTION__
+00024090 r IDirectFBSurface::FillRectangle(DFBRectangle&)::__FUNCTION__
+000240a0 r IDirectFBSurface::FillRectangle(DFBRegion&)::__FUNCTION__
+000240b0 r IDirectFBSurface::DrawRectangle(int, int, int, int)::__FUNCTION__
+000240c0 r IDirectFBSurface::DrawLine(int, int, int, int)::__FUNCTION__
+000240cc r IDirectFBSurface::DrawLines(DFBRegion const*, unsigned int)::__FUNCTION__
+000240d8 r IDirectFBSurface::FillRectangles(DFBRectangle const*, unsigned int)::__FUNCTION__
+000240e8 r IDirectFBSurface::FillTriangle(int, int, int, int, int, int)::__FUNCTION__
+000240f8 r IDirectFBSurface::FillSpans(int, DFBSpan const*, unsigned int)::__FUNCTION__
+00024104 r IDirectFBSurface::SetFont(IDirectFBFont const&) const::__FUNCTION__
+0002410c r IDirectFBSurface::GetFont() const::__FUNCTION__
+00024114 r IDirectFBSurface::DrawString(char const*, int, int, int, DFBSurfaceTextFlags)::__FUNCTION__
+00024120 r IDirectFBSurface::DrawGlyph(unsigned int, int, int, DFBSurfaceTextFlags)::__FUNCTION__
+0002412c r IDirectFBSurface::SetEncoding(unsigned int)::__FUNCTION__
+00024138 r IDirectFBSurface::GetSubSurface(DFBRectangle*)::__FUNCTION__
+00024148 r IDirectFBSurface::SetColor(DFBColor const&)::__FUNCTION__
+00024154 r IDirectFBSurface::SetColor(DFBColor const*)::__FUNCTION__
+00024160 r IDirectFBSurface::FillRectangle(DFBRectangle const&)::__FUNCTION__
+00024170 r IDirectFBSurface::DrawRectangle(DFBRectangle const&)::__FUNCTION__
+00024180 r IDirectFBSurface::DrawLine(DFBRegion const&)::__FUNCTION__
+0002418c r IDirectFBSurface::GetSubSurface(int, int, int, int)::__FUNCTION__
+0002419c r IDirectFBSurface::Dump(char const*, char const*)::__FUNCTION__
+000241a4 r IDirectFBSurface::DisableAcceleration(DFBAccelerationMask)::__FUNCTION__
+000241b8 r IDirectFBSurface::GetGL()::__FUNCTION__
+000241c0 r IDirectFBSurface::GetID()::__FUNCTION__
+000241c8 r IDirectFBSurface::AllowAccess(char const*)::__FUNCTION__
+000241d4 r IDirectFBSurface::GetClip(DFBRegion*)::__FUNCTION__
+000241dc r IDirectFBSurface::GetFramebufferOffset()::__FUNCTION__
+000241f4 r IDirectFBSurface::ReleaseSource()::__FUNCTION__
+00024204 r IDirectFBSurface::SetIndexTranslation(int const*, int)::__FUNCTION__
+00024218 r IDirectFBSurface::Read(void*, int, DFBRectangle const*)::__FUNCTION__
+00024220 r IDirectFBSurface::Write(void const*, int, DFBRectangle const*)::__FUNCTION__
+00024228 r $d
+00024238 r IDirectFBVideoProvider::GetCapabilities()::__FUNCTION__
+00024248 r IDirectFBVideoProvider::GetSurfaceDescription(DFBSurfaceDescription*)::__FUNCTION__
+00024260 r IDirectFBVideoProvider::GetStreamDescription(DFBStreamDescription*)::__FUNCTION__
+00024278 r IDirectFBVideoProvider::PlayTo(IDirectFBSurface*, DFBRectangle*, void (*)(void*), void*)::__FUNCTION__
+00024280 r IDirectFBVideoProvider::Stop()::__FUNCTION__
+00024288 r IDirectFBVideoProvider::GetStatus()::__FUNCTION__
+00024294 r IDirectFBVideoProvider::SeekTo(double)::__FUNCTION__
+0002429c r IDirectFBVideoProvider::GetPos()::__FUNCTION__
+000242a4 r IDirectFBVideoProvider::GetLength()::__FUNCTION__
+000242b0 r IDirectFBVideoProvider::GetColorAdjustment(DFBColorAdjustment*)::__FUNCTION__
+000242c4 r IDirectFBVideoProvider::SetColorAdjustment(DFBColorAdjustment&)::__FUNCTION__
+000242d8 r IDirectFBVideoProvider::SendEvent(DFBEvent&)::__FUNCTION__
+000242e4 r IDirectFBVideoProvider::SetPlaybackFlags(DFBVideoProviderPlaybackFlags)::__FUNCTION__
+000242f8 r IDirectFBVideoProvider::SetSpeed(double)::__FUNCTION__
+00024304 r IDirectFBVideoProvider::GetSpeed()::__FUNCTION__
+00024310 r IDirectFBVideoProvider::SetVolume(float)::__FUNCTION__
+0002431c r IDirectFBVideoProvider::GetVolume()::__FUNCTION__
+00024328 r $d
+00024338 r IDirectFBWindow::GetID()::__FUNCTION__
+00024340 r IDirectFBWindow::GetPosition(int*, int*)::__FUNCTION__
+0002434c r IDirectFBWindow::GetSize(int*, int*)::__FUNCTION__
+00024354 r IDirectFBWindow::CreateEventBuffer()::__FUNCTION__
+00024368 r IDirectFBWindow::AttachEventBuffer(IDirectFBEventBuffer*)::__FUNCTION__
+0002437c r IDirectFBWindow::DetachEventBuffer(IDirectFBEventBuffer*)::__FUNCTION__
+00024390 r IDirectFBWindow::EnableEvents(DFBWindowEventType)::__FUNCTION__
+000243a0 r IDirectFBWindow::DisableEvents(DFBWindowEventType)::__FUNCTION__
+000243b0 r IDirectFBWindow::GetSurface()::__FUNCTION__
+000243bc r IDirectFBWindow::SetOptions(DFBWindowOptions)::__FUNCTION__
+000243c8 r IDirectFBWindow::GetOptions()::__FUNCTION__
+000243d4 r IDirectFBWindow::SetColorKey(unsigned char, unsigned char, unsigned char)::__FUNCTION__
+000243e0 r IDirectFBWindow::SetColorKeyIndex(unsigned int)::__FUNCTION__
+000243f4 r IDirectFBWindow::SetOpacity(unsigned char)::__FUNCTION__
+00024400 r IDirectFBWindow::SetOpaqueRegion(int, int, int, int)::__FUNCTION__
+00024410 r IDirectFBWindow::GetOpacity()::__FUNCTION__
+0002441c r IDirectFBWindow::SetCursorShape(IDirectFBSurface*, int, int)::__FUNCTION__
+0002442c r IDirectFBWindow::RequestFocus()::__FUNCTION__
+0002443c r IDirectFBWindow::GrabKeyboard()::__FUNCTION__
+0002444c r IDirectFBWindow::UngrabKeyboard()::__FUNCTION__
+0002445c r IDirectFBWindow::GrabPointer()::__FUNCTION__
+00024468 r IDirectFBWindow::UngrabPointer()::__FUNCTION__
+00024478 r IDirectFBWindow::GrabKey(DFBInputDeviceKeySymbol, DFBInputDeviceModifierMask)::__FUNCTION__
+00024480 r IDirectFBWindow::UngrabKey(DFBInputDeviceKeySymbol, DFBInputDeviceModifierMask)::__FUNCTION__
+0002448c r IDirectFBWindow::Move(int, int)::__FUNCTION__
+00024494 r IDirectFBWindow::MoveTo(int, int)::__FUNCTION__
+0002449c r IDirectFBWindow::Resize(int, int)::__FUNCTION__
+000244a4 r IDirectFBWindow::SetStackingClass(DFBWindowStackingClass)::__FUNCTION__
+000244b8 r IDirectFBWindow::Raise()::__FUNCTION__
+000244c0 r IDirectFBWindow::Lower()::__FUNCTION__
+000244c8 r IDirectFBWindow::RaiseToTop()::__FUNCTION__
+000244d4 r IDirectFBWindow::LowerToBottom()::__FUNCTION__
+000244e4 r IDirectFBWindow::PutAtop(IDirectFBWindow*)::__FUNCTION__
+000244ec r IDirectFBWindow::PutBelow(IDirectFBWindow*)::__FUNCTION__
+000244f8 r IDirectFBWindow::Close()::__FUNCTION__
+00024500 r IDirectFBWindow::Destroy()::__FUNCTION__
+00024508 r IDirectFBWindow::SetBounds(int, int, int, int)::__FUNCTION__
+00024514 r IDirectFBWindow::ResizeSurface(int, int)::__FUNCTION__
+00024524 r IDirectFBWindow::BeginUpdates(DFBRegion const*)::__FUNCTION__
+00024534 r IDirectFBWindow::SetDstGeometry(DFBWindowGeometry*)::__FUNCTION__
+00024544 r IDirectFBWindow::SetSrcGeometry(DFBWindowGeometry*)::__FUNCTION__
+00024554 r $d
+00024578 r $d
+0002459c r $d
+000245c0 r $d
+000246d0 r $d
+000246dc r $d
+00024700 r $d
+00024724 r $d
+00024748 r $d
+0002476c r $d
+00024790 r $d
+000247b4 r $d
+000247d8 r $d
+000247fc r $d
+00024820 r $d
+00024844 r $d
+00024868 r $d
+0002488c r $d
+00024e7c r $d
+00024e88 r $d
+00024eac r $d
+00024ed0 r $d
+00024edc r $d
+00024f00 r $d
+00024f24 r $d
+00024f30 r $d
+00024f54 r $d
+00024f78 r $d
+00024f84 r $d
+00024fa8 r $d
+00024fcc r $d
+00024fd8 r $d
+00024ffc r $d
+00025020 r $d
+0002502c r $d
+00025050 r $d
+00025074 r $d
+00025080 r $d
+000250a4 r $d
+000250c8 r $d
+000250d4 r $d
+000250f8 r $d
+0002511c r $d
+00025128 r $d
+0002514c r $d
+00025170 r $d
+0002517c r $d
+000251a0 r $d
+000251c4 r $d
+000251e8 r $d
+0002520c r $d
+00025230 r $d
+00025254 r $d
+00025278 r $d
+0002529c r $d
+000252c0 r $d
+000252e4 r $d
+00025308 r $d
+0002532c r $d
+00025350 r $d
+00025374 r $d
+00025398 r $d
+000253bc r $d
+000253e0 r $d
+00025404 r $d
+00025428 r $d
+0002544c r $d
+00025470 r $d
+00025494 r $d
+00025778 r $d
+0002579c r $d
+00025f64 r $d
+00025f70 r $d
+00025f94 r $d
+00025fb8 r $d
+00025fc4 r $d
+00025fe8 r $d
+0002600c r $d
+0002627c r $d
+0002652c r $d
+00026628 r $d
+00026910 r $d
+0002691c r $d
+00026a88 r $d
+00026e80 r $d
+00026e8c r $d
+00026e98 r $d
+00026ea4 r $d
+00026eb0 r $d
+00026ebc r $d
+00027d40 r $d
+00027d4c r $d
+00027d58 r $d
+000280fc r $d
+000289c0 r $d
+00028a08 r $d
+00028a10 r $d
+00028a18 r $d
+00028a20 r $d
+00028a28 r $d
+00028a30 r $d
+00028a38 r $d
+00028b20 r $d
+00028b28 r $d
+00028b30 r $d
+00028b38 r $d
+00028b40 r $d
+00028b48 r $d
+00028b50 r $d
+00028b58 r $d
+00028b60 r $d
+00028b68 r $d
+00028b70 r $d
+00028b78 r $d
+00028b80 r $d
+00028b88 r $d
+00028b90 r $d
+00028b98 r $d
+00028ba0 r $d
+00028ba8 r $d
+00028bb0 r $d
+00028bb8 r $d
+00028bc0 r $d
+00028bc8 r $d
+00028bd0 r $d
+00028bd8 r $d
+00028be0 r $d
+00028be8 r $d
+00028bf0 r $d
+00028bf8 r $d
+00028c00 r $d
+00028c08 r $d
+00028c10 r $d
+00028c18 r $d
+00028c20 r $d
+00028c28 r $d
+00028c30 r $d
+00028c38 r $d
+00028c40 r $d
+00028c48 r $d
+00028c50 r $d
+00028c58 r $d
+00028c60 r $d
+00028c68 r $d
+00028c70 r $d
+00028c78 r $d
+00028c80 r $d
+00028c88 r $d
+00028c90 r $d
+00028c98 r $d
+00028ca0 r $d
+00028ca8 r $d
+00028cb0 r $d
+00028cb8 r $d
+00028cc0 r $d
+00028cc8 r $d
+00028cd0 r $d
+00028cd8 r $d
+00028ce0 r $d
+00028ce8 r $d
+00028cf0 r $d
+00028cf8 r $d
+00028d00 r $d
+00028d78 r $d
+00028ea8 r $d
+00028eb0 r $d
+00028eb8 r $d
+00028ec0 r $d
+00028ec8 r $d
+00028ed0 r $d
+00028ed8 r $d
+00028ee0 r $d
+00028f48 r $d
+00028fb8 r $d
+00028fe8 r $d
+00029060 r $d
+00029068 r $d
+000290a8 r $d
+00029148 r $d
+00029378 r $d
+00029380 r $d
+00029388 r $d
+00029390 r $d
+00029398 r $d
+000293a0 r $d
+000293a8 r $d
+000293b0 r $d
+00029448 r $d
+000295a0 r $d
+000295a0 r __FRAME_END__
+00032000 t $d
+00032000 t __frame_dummy_init_array_entry
+00032004 t $d
+00032008 t $d
+0003200c t $d
+00032010 t $d
+00032014 t $d
+00032018 t $d
+0003201c t $d
+00032020 t $d
+00032024 t $d
+00032028 t $d
+0003202c t $d
+00032030 t $d
+00032034 t $d
+00032038 t $d
+00032038 t __do_global_dtors_aux_fini_array_entry
+0003203c d $d
+0003203c d __JCR_END__
+0003203c d __JCR_LIST__
+00032040 d $d
+00032040 V vtable for IDirectFB
+00032050 d $d
+00032050 V vtable for IPPAny<IDirectFB, _IDirectFB>
+00032060 d $d
+00032060 V typeinfo for DFBException*
+00032070 d $d
+00032070 V typeinfo for IDirectFB
+0003207c d $d
+0003207c V typeinfo for IPPAny<IDirectFB, _IDirectFB>
+00032084 d $d
+00032084 V typeinfo for DFBException
+00032090 d $d
+00032090 V vtable for IDirectFBDataBuffer
+000320a0 d $d
+000320a0 V vtable for IPPAny<IDirectFBDataBuffer, _IDirectFBDataBuffer>
+000320b0 d $d
+000320b0 V vtable for IDirectFBVideoProvider
+000320c0 d $d
+000320c0 V vtable for IPPAny<IDirectFBVideoProvider, _IDirectFBVideoProvider>
+000320d0 d $d
+000320d0 V vtable for IDirectFBImageProvider
+000320e0 d $d
+000320e0 V vtable for IPPAny<IDirectFBImageProvider, _IDirectFBImageProvider>
+000320f0 d $d
+000320f0 V vtable for IDirectFBFont
+00032100 d $d
+00032100 V vtable for IPPAny<IDirectFBFont, _IDirectFBFont>
+00032110 d $d
+00032110 V vtable for IDirectFBEventBuffer
+00032120 d $d
+00032120 V vtable for IPPAny<IDirectFBEventBuffer, _IDirectFBEventBuffer>
+00032130 d $d
+00032130 V vtable for IDirectFBInputDevice
+00032140 d $d
+00032140 V vtable for IPPAny<IDirectFBInputDevice, _IDirectFBInputDevice>
+00032150 d $d
+00032150 V vtable for IDirectFBPalette
+00032160 d $d
+00032160 V vtable for IPPAny<IDirectFBPalette, _IDirectFBPalette>
+00032170 d $d
+00032170 V vtable for IDirectFBSurface
+00032180 d $d
+00032180 V vtable for IPPAny<IDirectFBSurface, _IDirectFBSurface>
+00032190 d $d
+00032190 V vtable for IDirectFBDisplayLayer
+000321a0 d $d
+000321a0 V vtable for IPPAny<IDirectFBDisplayLayer, _IDirectFBDisplayLayer>
+000321b0 d $d
+000321b0 V vtable for IDirectFBScreen
+000321c0 d $d
+000321c0 V vtable for IPPAny<IDirectFBScreen, _IDirectFBScreen>
+000321d0 d $d
+000321d0 V typeinfo for IDirectFBDataBuffer
+000321dc d $d
+000321dc V typeinfo for IPPAny<IDirectFBDataBuffer, _IDirectFBDataBuffer>
+000321e4 d $d
+000321e4 V typeinfo for IDirectFBVideoProvider
+000321f0 d $d
+000321f0 V typeinfo for IPPAny<IDirectFBVideoProvider, _IDirectFBVideoProvider>
+000321f8 d $d
+000321f8 V typeinfo for IDirectFBImageProvider
+00032204 d $d
+00032204 V typeinfo for IPPAny<IDirectFBImageProvider, _IDirectFBImageProvider>
+0003220c d $d
+0003220c V typeinfo for IDirectFBFont
+00032218 d $d
+00032218 V typeinfo for IPPAny<IDirectFBFont, _IDirectFBFont>
+00032220 d $d
+00032220 V typeinfo for IDirectFBEventBuffer
+0003222c d $d
+0003222c V typeinfo for IPPAny<IDirectFBEventBuffer, _IDirectFBEventBuffer>
+00032234 d $d
+00032234 V typeinfo for IDirectFBInputDevice
+00032240 d $d
+00032240 V typeinfo for IPPAny<IDirectFBInputDevice, _IDirectFBInputDevice>
+00032248 d $d
+00032248 V typeinfo for IDirectFBPalette
+00032254 d $d
+00032254 V typeinfo for IPPAny<IDirectFBPalette, _IDirectFBPalette>
+0003225c d $d
+0003225c V typeinfo for IDirectFBSurface
+00032268 d $d
+00032268 V typeinfo for IPPAny<IDirectFBSurface, _IDirectFBSurface>
+00032270 d $d
+00032270 V typeinfo for IDirectFBDisplayLayer
+0003227c d $d
+0003227c V typeinfo for IPPAny<IDirectFBDisplayLayer, _IDirectFBDisplayLayer>
+00032284 d $d
+00032284 V typeinfo for IDirectFBScreen
+00032290 d $d
+00032290 V typeinfo for IPPAny<IDirectFBScreen, _IDirectFBScreen>
+00032298 d $d
+00032298 V vtable for IDirectFBWindow
+000322a8 d $d
+000322a8 V vtable for IPPAny<IDirectFBWindow, _IDirectFBWindow>
+000322b8 d $d
+000322b8 V typeinfo for IDirectFBWindow
+000322c4 d $d
+000322c4 V typeinfo for IPPAny<IDirectFBWindow, _IDirectFBWindow>
+000322cc a _DYNAMIC
+00032404 a _GLOBAL_OFFSET_TABLE_
+00032b90 d $d
+00032b90 d __dso_handle
+00032b94 d $d
+00032b94 d _direct_debug_deprecated
+00032bb0 d $d
+00032bb0 d _direct_debug_deprecated
+00032bcc d $d
+00032bcc d _direct_debug_deprecated
+00032be8 d $d
+00032be8 d _direct_debug_deprecated
+00032c04 d $d
+00032c04 d _direct_debug_deprecated
+00032c20 d $d
+00032c20 d _direct_debug_deprecated
+00032c3c d $d
+00032c3c d _direct_debug_deprecated
+00032c58 d $d
+00032c58 d _direct_debug_deprecated
+00032c74 d $d
+00032c74 d _direct_debug_deprecated
+00032c90 d $d
+00032c90 d _direct_debug_deprecated
+00032cac d $d
+00032cac d _direct_debug_deprecated
+00032cc8 d $d
+00032cc8 d _direct_debug_deprecated
+00032ce4 d $d
+00032ce4 d _direct_debug_deprecated
+00032d00 b $d
+00032d00 d __TMC_END__
+00032d00 B __bss_start
+00032d00 B __bss_start__
+00032d00 D _edata
+00032d00 b completed.8864
+00032d04 b $d
+00032d04 b std::__ioinit
+00032d08 b $d
+00032d08 b std::__ioinit
+00032d0c b $d
+00032d0c b std::__ioinit
+00032d10 b $d
+00032d10 b std::__ioinit
+00032d14 b $d
+00032d14 b std::__ioinit
+00032d18 b $d
+00032d18 b std::__ioinit
+00032d1c b $d
+00032d1c b std::__ioinit
+00032d20 b $d
+00032d20 b std::__ioinit
+00032d24 b $d
+00032d24 b std::__ioinit
+00032d28 b $d
+00032d28 b std::__ioinit
+00032d2c b $d
+00032d2c b std::__ioinit
+00032d30 b $d
+00032d30 b std::__ioinit
+00032d34 b $d
+00032d34 b std::__ioinit
+00032d38 B __bss_end__
+00032d38 B __end__
+00032d38 B _bss_end__
+00032d38 B _end

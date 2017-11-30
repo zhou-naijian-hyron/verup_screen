@@ -236,6 +236,36 @@ static void releaseWindow()
 }
 
 /******************************************************************************/
+/*! @brief リソースの解放
+
+ @param			無
+ @return		無
+ ******************************************************************************/
+static void releaseResource()
+{
+	// フォントリソースの解放
+	if (font != NULL)
+	{
+		font->Release(font);
+		font = NULL;
+	}
+
+	// Layerリソースの解放
+	if( layer != NULL )
+	{
+		layer->Release(layer);
+		layer = NULL;
+	}
+
+	// DirectFbリソースの解放
+	if( dfb != NULL )
+	{
+		dfb->Release(dfb);
+		dfb = NULL;
+	}
+}
+
+/******************************************************************************/
 /*! @brief surfaceの色を設定する
 
  @param[in]		srf		surfaceのポインター
@@ -273,14 +303,14 @@ static int init_dfb(void)
 	if (0 != (result = DirectFBInit(NULL, NULL)))
 	{
 		DirectFBError( "DirectFBInit() failed", result );
-		goto ERROR;
+		return -1;
 	}
 
 	/** 2．DirectFBのCreate */
 	if (0 != (result = DirectFBCreate(&dfb))) 
 	{
 		DirectFBError( "DirectFBCreate() failed", result );
-		goto ERROR;
+		return -1;
 	}
 
 	/** 3．DirectFBの表示レイヤのCreate */
@@ -294,31 +324,31 @@ static int init_dfb(void)
 		{
 			DirectFBError( "IDirectFB::GetDisplayLayer() failed", result );
 		}
-		goto ERROR_DFB;
+		return -1;
 	}
 
 	/** 4．DirectFBの表示レイヤの協同組合レベルを設定する */
 	if (0 != (result = layer->SetCooperativeLevel(layer, DLSCL_EXCLUSIVE))) 
 	{
 		DirectFBError("IDirectFBDisplayLayer::SetCooperativeLevel() failed", result);
-		goto ERROR_LAYER;
+		return -1;
 	}
 
 	/** 5．DirectFBの表示レイヤの属性をgetする */
 	if (0 != (result = layer->GetConfiguration(layer, &config)))
 	{
 		DirectFBError( "IDirectFBDisplayLayer::GetConfiguration() failed", result );
-		goto ERROR_LAYER;
+		return -1;
 	}
 
 	/** 6．DirectFBの表示レイヤの属性をsetする */
 	config.flags = DLCONF_BUFFERMODE | DLCONF_PIXELFORMAT;
-	config.buffermode = DLBM_FRONTONLY;
+	config.buffermode = DLBM_BACKSYSTEM;
 	config.pixelformat = DSPF_ARGB;
 	if (0 != (result = layer->SetConfiguration(layer, &config))) 
 	{
 		DirectFBError( "IDirectFBDisplayLayer::SetConfiguration() failed", result );
-		goto ERROR_LAYER;
+		return -1;
 	}
 
 	/** 7．DirectFBのスクリーンの属性をgetする */
@@ -326,7 +356,7 @@ static int init_dfb(void)
 	if (0 != (result = dfb->GetScreen(dfb, 0, &iDirectFBScreen)))
 	{
 		DirectFBError("Couldn't get screen data .. \n", result);
-		goto ERROR_LAYER;
+		return -1;
 	}
 	else
 	{
@@ -352,19 +382,13 @@ static int init_dfb(void)
 	if (0 != result)
 	{
 		DirectFBError("Couldn't create font", result);
-		goto ERROR_LAYER;
+		return -1;
 	}
 
 	/** 9．DirectFBのマウスカーソルが無効に設定する */
 	layer->EnableCursor(layer, 0);
-	return 0;
 
-ERROR_LAYER:
-	layer->Release(layer);
-ERROR_DFB:
-	dfb->Release(dfb);
-ERROR:
-	return -1;
+	return 0;
 }
 
 /******************************************************************************/
@@ -456,20 +480,27 @@ int hub_verup_init_screen(void)
 	if (0 != init_dfb())
 	{
 		fprintf(stderr, MODNAME "failed to build DirectFB\n");
-		return -1;
+		goto ERROR;
 	}
 
 	/** ウィンドウを初期化する */
 	if (0 != initWindow())
 	{
 		fprintf(stderr, MODNAME "failed to initWindow\n");
-		return -1;
+		goto ERROR;
 	}
 
 	/** 画面のクリア */
 	hub_verup_clear_screen();
 
 	return 0;
+
+ERROR:
+	/** ウィンドウの解放 */
+	releaseWindow();
+	/** リソースの解放 */
+	releaseResource();
+	return -1;
 }
 
 /******************************************************************************/
@@ -484,29 +515,11 @@ int hub_verup_exit_screen(void)
 	hub_verup_clear_screen();
 	clear_surface(surfaceOfMain);
 
-	/** リソース開放を忘れると、OSD画面にカスが残る */
+	/** ウィンドウの解放 */
 	releaseWindow();
 
-	// フォントリソースの解放
-	if (font != NULL)
-	{
-		font->Release(font);
-		font = NULL;
-	}
-
-	// Layerリソースの解放
-	if( layer != NULL )
-	{
-		layer->Release(layer);
-		layer = NULL;
-	}
-
-	// DirectFbリソースの解放
-	if( dfb != NULL )
-	{
-		dfb->Release(dfb);
-		dfb = NULL;
-	}
+	/** リソースの解放 */
+	releaseResource();
 
 	return 0;
 }
